@@ -1,0 +1,2 @@
+30/05/2025 16:45:36 - Gênero: 1, Idade: 22, Tipo de Pele: 4, Tom de Pele: 1, Condições: 1
+30/05/2025 16:47:04 - Gênero: 2, Idade: 25, Tipo de Pele: 1, Tom de Pele: 4, Condições: 5

@@ -14,11 +14,11 @@ public class Main{
 
     System.out.print("Deseja ajuda? [0 para NÃO | 1 para SIM] --> ");
 
-
-
+    // Criando as variáveis que vão ter os valores digitados pelo usuário
     int escolha, genero, idade, tipoDePele, tomDePele, condicoesDePele, preferenciaFragancia, usaProdutos, produtosUtilizados;
     //int orcamentoMedio;
 
+    // Looping que vai rodar o código principal enquanto o usuário desejar. Encerra quando escolha = 0.
     do {
       escolha = scanner.nextInt();
       while (escolha != 1 || escolha != 0){
@@ -117,6 +117,7 @@ public class Main{
 
           produtosUtilizados = scanner.nextInt();
 
+          // Opção de CONTINUAR || caso o usuário deseje ver o relatório dele ou não
           System.out.println("Deseja continuar? [1 para SIM e 2 para NÃO]\n" + //
                         "--> ");
 
@@ -126,6 +127,18 @@ public class Main{
                         
           System.out.println("Obrigada por responder, estamos processando seus dados...");
 
+          // Coletar os dados do usuário
+          String userdata = String.format(
+            "Gênero: %d, Idade: %d, Tipo de Pele: %d, Tom de Pele: %d, Condições: %d",
+            genero, idade, tipoDePele, tomDePele, condicoesDePele
+          );
+
+          Data.saveUserData(userdata);
+
+          // Gerar recomendações
+          String recommendation = "Produtos recomendados: ";
+          Data.saveRecommendation(recommendation);
+
           System.out.println("✔️ Genovia identificou que sua pele possui as seguintes características: \n" + //
                         tipoDePele + tomDePele + condicoesDePele);
 
@@ -134,6 +147,7 @@ public class Main{
                         "- Atendem às suas preferências\n" + //
                         "- Estão dentro do seu orçamento");
 
+
           System.out.println("Deseja visualizar a lista de produtos recomendados?\n" + //
                         "(1) Sim, mostrar lista de produtos  \n" + //
                         "(2) Não, encerrar aqui  \n" + //
@@ -141,6 +155,7 @@ public class Main{
                     
           int visualizarProdutos = scanner.nextInt();
 
+          //Mostrar a lista de produtos || caso 1: mostra || caso 2: pula || caso else: repete até digitar 1 ou 2
           while (visualizarProdutos != 1 || visualizarProdutos != 0){
             if (visualizarProdutos == 1){
 
@@ -156,16 +171,18 @@ public class Main{
             }
           }
 
+
+          // FINAL. Pergunta se o usuário deseja continuar utilizando a assistente ou não.
           escolha = scanner.nextInt();
 
-        } else if (escolha == 0){
-          System.out.println("Certo! Se precisar de ajuda -------- ");
-          break;
-        } else {
-          System.out.println("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 2 caso NÃO precise de ajuda.");
-          escolha = scanner.nextInt();
+          } else if (escolha == 0){
+            System.out.println("Certo! Se precisar de ajuda -------- ");
+            break;
+          } else {
+            System.out.println("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 2 caso NÃO precise de ajuda.");
+            escolha = scanner.nextInt();
+          }
         }
-      }
       
     } while (escolha == 1);
 
