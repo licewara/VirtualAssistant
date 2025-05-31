@@ -4,18 +4,17 @@ public class Main{
   public static void main(String[] args){
     Scanner scanner = new Scanner(System.in);
 
-    System.out.println("Olá! Eu sou a Genovia, sua assistente de beleza personalizada.  \n" + //
-            "Estou aqui para te ajudar a encontrar os melhores produtos de skincare e maquiagem,  \n" + //
-            "de acordo com o seu tipo de pele, preferências e necessidades.  \n");
-
-    System.out.println("Privacidade em primeiro lugar!  \n" + //
-            "Seus dados são utilizados apenas para gerar um relatório personalizado.  \n" + //
-            "Estamos de acordo com a Lei Geral de Proteção de Dados (LGPD). \n");
-
-    System.out.print("Deseja ajuda? [0 para NÃO | 1 para SIM] --> ");
+    System.out.print("Seja bem-vindo(a)!\n" + //
+            "Você já conhece nossa assistente virtual de beleza?\n" + //
+            "Ela está pronta para montar uma lista personalizada de produtos, feita especialmente para você, com base nas suas características e na sua rotina. Vamos começar?\n" + //
+            "\n" + //
+            "Digite [1] para 'Quero Agora' e [2] para 'Talvez depois'\n" + //
+            "--> ");
 
     // Criando as variáveis que vão ter os valores digitados pelo usuário
-    int escolha, genero, idade, tipoDePele, tomDePele, condicoesDePele, preferenciaFragancia, usaProdutos, produtosUtilizados;
+    int escolha, genero, idade, tipoDePele, tomDePele, condicoesDePele, preferenciaFragancia, usaProdutos, produtosProcurados;
+    String generoStr = "", tipoDePeleStr = "", tomDePeleStr = "", condicoesDePeleStr = "", preferenciaFraganciaStr = ""
+    , usaProdutosStr = "", produtosProcuradosStr = "";
     //int orcamentoMedio;
 
     // Looping que vai rodar o código principal enquanto o usuário desejar. Encerra quando escolha = 0.
@@ -23,9 +22,16 @@ public class Main{
       escolha = scanner.nextInt();
       while (escolha != 1 || escolha != 0){
         if (escolha == 1){
+          System.out.println("Olá! Eu sou a Genovia, sua assistente de beleza personalizada.  \n" + //
+                  "Estou aqui para te ajudar a encontrar os melhores produtos de skincare e maquiagem,  \n" + //
+                  "de acordo com o seu tipo de pele, preferências e necessidades.  \n");
+
+          System.out.println("Privacidade em primeiro lugar!  \n" + //
+                  "Seus dados são utilizados apenas para gerar um relatório personalizado.  \n" + //
+                  "Estamos de acordo com a Lei Geral de Proteção de Dados (LGPD). \n");
 
           System.out.println("-------------------------------------------------------\n" + //
-                        "🧍 Sobre você\n" + //
+                        "Sobre você\n" + //
                         "-------------------------------------------------------\n");
 
           System.out.print("1. Qual seu gênero?\n" + //
@@ -35,7 +41,14 @@ public class Main{
                         "(4) Outro\n " + //
                         "Digite seu gênero: ");
 
-          genero = scanner.nextInt();
+          genero = scanner.nextInt();        
+
+          switch (genero){
+            case 1: generoStr = "Feminino"; break;
+            case 2: generoStr = "Masculino"; break;
+            case 3: generoStr = "Não-informado"; break;
+            case 4: generoStr = "Outro"; break;
+          }
 
           System.out.print("\n2. Qual sua idade?\n"  + //
                         "Digite sua idade: ");
@@ -43,7 +56,7 @@ public class Main{
           idade = scanner.nextInt();
 
           System.out.print("\n-------------------------------------------------------\n" + //
-                        "🧖‍♀️ Características da sua pele\n" + //
+                        "Características da sua pele\n" + //
                         "-------------------------------------------------------\n");
                           
           System.out.print("\n3. Qual o seu tipo de pele?\n" + //
@@ -55,6 +68,13 @@ public class Main{
                         "Digite seu tipo de pele: ");
 
           tipoDePele = scanner.nextInt();
+          switch (tipoDePele){
+            case 1: tipoDePeleStr = "Oleosa"; break;
+            case 2: tipoDePeleStr = "Seca"; break;
+            case 3: tipoDePeleStr = "Mista"; break;
+            case 4: tipoDePeleStr = "Normal"; break;
+            case 5: tipoDePeleStr = "Sensível"; break;
+          }
 
           System.out.print("\n4. Qual o seu tom de pele?\n" + //
                         "(1) Muito clara  \n" + //
@@ -65,6 +85,13 @@ public class Main{
                         "Digite seu tom de pele: ");
 
           tomDePele = scanner.nextInt();
+          switch (tomDePele){
+            case 1: tomDePeleStr = "Muito clara"; break;
+            case 2: tomDePeleStr = "Clara"; break;
+            case 3: tomDePeleStr = "Morena clara"; break;
+            case 4: tomDePeleStr = "Morena média"; break;
+            case 5: tomDePeleStr = "Negra"; break;
+          }
 
           System.out.print("\n5. Quais dessas condições você possui atualmente na pele? (pode escolher mais de uma separando por vírgulas)\n" + //
                         "(1) Acne  \n" + //
@@ -77,13 +104,28 @@ public class Main{
                         "(8) Nenhuma das opções acima  \n" + //
                         "Digite as condições de sua pele: ");
 
+          //Adicionar posteriormente a opção do usuário conseguir digitar mais de uma opção
           condicoesDePele = scanner.nextInt();
+          switch (condicoesDePele){
+            case 1: condicoesDePeleStr = "Acne"; break;
+            case 2: condicoesDePeleStr = "Rosácea"; break;
+            case 3: condicoesDePeleStr = "Manchas"; break;
+            case 4: condicoesDePeleStr = "Oleosidade excessiva"; break;
+            case 5: condicoesDePeleStr = "Ressecamento"; break;
+            case 6: condicoesDePeleStr = "Poros dilatados"; break;
+            case 7: condicoesDePeleStr = "Sensibilidade a produtos"; break;
+            case 8: condicoesDePeleStr = "Nenhuma condição da pele citada"; break;
+          }
 
           System.out.print("\n" + //
                         "6. Você prefere produtos com ou sem fragrância? [1 para COM FRAGANCIA || 2 para SEM FRAGANCIA] \n" +
                         "Digite aqui sua preferência: ");
 
           preferenciaFragancia = scanner.nextInt();
+          switch (preferenciaFragancia){
+            case 1: preferenciaFraganciaStr = "Produtos com fragância"; break;
+            case 2: preferenciaFraganciaStr = "Produtos sem fragância"; break;
+          }
 
           /*OPCIONAL
            System.out.print("10. Qual seu orçamento médio por produto? \n" + //
@@ -97,7 +139,7 @@ public class Main{
             */
            
           System.out.println("-------------------------------------------------------\n" + //
-                        "💅 Sobre sua rotina\n" + //
+                        "Sobre sua rotina\n" + //
                         "-------------------------------------------------------");
           
           System.out.print("7. Você já usa produtos de skincare ou maquiagem?\n" + //
@@ -108,29 +150,40 @@ public class Main{
                         "Digite aqui se usa produtos: ");
 
           usaProdutos = scanner.nextInt();
+          switch (usaProdutos){
+            case 1: usaProdutosStr = "Todos os dias"; break;
+            case 2: usaProdutosStr = "Algumas vezes por semana"; break;
+            case 3: usaProdutosStr = "Raramente utiliza"; break;
+            case 4: usaProdutosStr = "Nunca utiliza"; break;
+          }
 
-          System.out.println("8. Quais produtos você está procurando no momento? (escolha mais de um, separando por vírgulas)\n" + //
+          System.out.print("8. Quais produtos você está procurando no momento? (escolha mais de um, separando por vírgulas)\n" + //
                         "(1) Skincare\n" + //
                         "(2) Maquiagem\n" + //
                         "(3) Ambos\n" + //
                         "Digite aqui quais produtos você está procurando: ");
 
-          produtosUtilizados = scanner.nextInt();
+          produtosProcurados = scanner.nextInt();
+          switch (produtosProcurados){
+            case 1: produtosProcuradosStr = "De skincare"; break;
+            case 2: produtosProcuradosStr = "De maquiagem"; break;
+            case 3: produtosProcuradosStr = "De skincare/maquiagem"; break;
+          }
 
           // Opção de CONTINUAR || caso o usuário deseje ver o relatório dele ou não
-          System.out.println("Deseja continuar? [1 para SIM e 2 para NÃO]\n" + //
+          System.out.print("Deseja continuar? [1 para SIM e 2 para NÃO]\n" + //
                         "--> ");
 
           System.out.println("-------------------------------------------------------\n" + //
-                        "📄 Geração do Relatório\n" + //
+                        "Geração do Relatório\n" + //
                         "-------------------------------------------------------");
                         
           System.out.println("Obrigada por responder, estamos processando seus dados...");
 
           // Coletar os dados do usuário
           String userdata = String.format(
-            "Gênero: %d, Idade: %d, Tipo de Pele: %d, Tom de Pele: %d, Condições: %d",
-            genero, idade, tipoDePele, tomDePele, condicoesDePele
+            "Gênero: %s, Idade: %d, Tipo de Pele: %s, Tom de Pele: %s, Condições: %s, Fragância: %s, Utiliza produtos: %s, Procurando produtos: %s ",
+            generoStr, idade, tipoDePeleStr, tomDePeleStr, condicoesDePeleStr, preferenciaFraganciaStr, usaProdutosStr, produtosProcurados 
           );
 
           Data.saveUserData(userdata);
@@ -139,8 +192,8 @@ public class Main{
           String recommendation = "Produtos recomendados: ";
           Data.saveRecommendation(recommendation);
 
-          System.out.println("✔️ Genovia identificou que sua pele possui as seguintes características: \n" + //
-                        tipoDePele + tomDePele + condicoesDePele);
+          //System.out.print("Genovia identificou que sua pele possui as seguintes características: " + //
+                        //tipoDePele + tomDePele + condicoesDePele);
 
           System.out.println("Com base nessas informações, criamos uma lista personalizada com produtos que:\n" + //
                         "- Respeitam suas restrições\n" + //
@@ -148,7 +201,7 @@ public class Main{
                         "- Estão dentro do seu orçamento");
 
 
-          System.out.println("Deseja visualizar a lista de produtos recomendados?\n" + //
+          System.out.print("Deseja visualizar a lista de produtos recomendados?\n" + //
                         "(1) Sim, mostrar lista de produtos  \n" + //
                         "(2) Não, encerrar aqui  \n" + //
                         "--> ");
@@ -171,15 +224,14 @@ public class Main{
             }
           }
 
-
           // FINAL. Pergunta se o usuário deseja continuar utilizando a assistente ou não.
           escolha = scanner.nextInt();
 
           } else if (escolha == 0){
-            System.out.println("Certo! Se precisar de ajuda -------- ");
+            System.out.println("Certo! Se precisar de ajuda {} ");
             break;
           } else {
-            System.out.println("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 2 caso NÃO precise de ajuda.");
+            System.out.print("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 2 caso NÃO precise de ajuda --> ");
             escolha = scanner.nextInt();
           }
         }
