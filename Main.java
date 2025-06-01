@@ -102,11 +102,12 @@ public class Main{
           }
 
           System.out.print("\n4. Qual o seu tom de pele?\n" + //
-                        "(1) Tom 1.0  \n" + //
-                        "(2) Tom 2.0  \n" + //
-                        "(3) Tom 3.0  \n" + //
-                        "(4) Tom 4.0  \n" + //
-                        "(5) Tom 5.0  \n" + //
+                        "(1) Tom 1 - Pele muito clara  \n" + //
+                        "(2) Tom 2 - Pele clara a média \n" + //
+                        "(3) Tom 3 - Pele média \n" + //
+                        "(4) Tom 4 - Pele média escura \n" + //
+                        "(5) Tom 5 - Pele negra  \n" + //
+                        "(6) Tom 6 - Pele negra profunda \n" + //
                         "Digite seu tom de pele: ");
 
           tomDePele = scanner.nextInt();
@@ -116,8 +117,11 @@ public class Main{
             case 3: tomDePeleStr = "Tom 3"; break;
             case 4: tomDePeleStr = "Tom 4"; break;
             case 5: tomDePeleStr = "Tom 5"; break;
+            case 6: tomDePeleStr = "Tom 6"; break;
           }
 
+          /*CONDIÇÕES DE PELE 
+          
           System.out.print("\n5. Quais dessas condições você possui atualmente na pele? (pode escolher mais de uma separando por vírgulas)\n" + //
                         "(1) Acne  \n" + //
                         "(2) Rosácea  \n" + //
@@ -132,18 +136,18 @@ public class Main{
           //Adicionar posteriormente a opção do usuário conseguir digitar mais de uma opção
           condicoesDePele = scanner.nextInt();
           switch (condicoesDePele){
-            case 1: condicoesDePeleStr = "Acne"; break;
-            case 2: condicoesDePeleStr = "Rosácea"; break;
-            case 3: condicoesDePeleStr = "Manchas"; break;
-            case 4: condicoesDePeleStr = "Oleosidade excessiva"; break;
-            case 5: condicoesDePeleStr = "Ressecamento"; break;
-            case 6: condicoesDePeleStr = "Poros dilatados"; break;
-            case 7: condicoesDePeleStr = "Sensibilidade a produtos"; break;
+            case 1: condicoesDePeleStr = "Acne"; produtosCliente.add("ProdutoAcne"); break;
+            case 2: condicoesDePeleStr = "Rosácea"; produtosCliente.add("ProdutoRosácea"); break;
+            case 3: condicoesDePeleStr = "Manchas"; produtosCliente.add("ProdutoManchas"); break;
+            case 4: condicoesDePeleStr = "Oleosidade excessiva"; produtosCliente.add("ProdutoOleosidadeExcessiva");  break;
+            case 5: condicoesDePeleStr = "Ressecamento"; produtosCliente.add("ProdutoRessecamento"); break;
+            case 6: condicoesDePeleStr = "Poros dilatados"; produtosCliente.add("ProdutoPorosDilatados"); break;
+            case 7: condicoesDePeleStr = "Sensibilidade a produtos"; produtosCliente.add("ProdutoSensAProdutos"); break;
             case 8: condicoesDePeleStr = "Nenhuma condição da pele citada"; break;
-          }
+          }*/
 
           System.out.print("\n" + //
-                        "6. Você prefere produtos com ou sem fragrância? [1 para COM FRAGANCIA || 2 para SEM FRAGANCIA] \n" +
+                        "5. Você prefere produtos com ou sem fragrância? [1 para COM FRAGANCIA || 2 para SEM FRAGANCIA] \n" +
                         "Digite aqui sua preferência: ");
 
           preferenciaFragancia = scanner.nextInt();
