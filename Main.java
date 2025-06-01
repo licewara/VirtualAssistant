@@ -36,6 +36,9 @@ public class Main{
     String[] produtosTom5 = {"ProdutoTom5GeralFrag", "ProdutoTom5GeralSemFrag", "ProdutoTom5OleosaFrag", "ProdutoTom5OleosaSemFrag", "ProdutoTom5SecaFrag", 
     "ProdutoTom5SecaSemFrag", "ProdutoTom5MistaFrag", "ProdutoTom5MistaSemFrag", "ProdutoTom5NormalFrag", "ProdutoTom5NormalSemFrag", "ProdutoTom5SensivelFrag", 
     "ProdutoTom5SensivelSemFrag"};
+    String[] produtosTom6 = {"ProdutoTom6GeralFrag", "ProdutoTom6GeralSemFrag", "ProdutoTom6OleosaFrag", "ProdutoTom6OleosaSemFrag", "ProdutoTom6SecaFrag", 
+    "ProdutoTom6SecaSemFrag", "ProdutoTom6MistaFrag", "ProdutoTom6MistaSemFrag", "ProdutoTom6NormalFrag", "ProdutoTom6NormalSemFrag", "ProdutoTom6SensivelFrag", 
+    "ProdutoTom6SensivelSemFrag"};
 
     //Produtos do cliente
     ArrayList<String> produtosCliente = new ArrayList<String>();
