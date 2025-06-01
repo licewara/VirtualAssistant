@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main{
   public static void main(String[] args){
@@ -13,8 +14,32 @@ public class Main{
 
     // Criando as variáveis que vão ter os valores digitados pelo usuário
     int escolha, genero, idade, tipoDePele, tomDePele, condicoesDePele, preferenciaFragancia, usaProdutos, produtosProcurados;
-    String generoStr = "", tipoDePeleStr = "", tomDePeleStr = "", condicoesDePeleStr = "", preferenciaFraganciaStr = ""
-    , usaProdutosStr = "", produtosProcuradosStr = "";
+    String generoStr = "", tipoDePeleStr = "", tomDePeleStr = "", condicoesDePeleStr = "", preferenciaFraganciaStr = "", 
+    usaProdutosStr = "", produtosProcuradosStr = "";
+  
+    //Array com os produtos específicos para cada tipo de pessoa
+    String[] produtosGerais = {"ProdutoPeleOleosaGeralFrag", "ProdutoPeleOleosaGeralSemFrag", "ProdutoPeleSecaGeralFrag", "ProdutoPeleSecaGeralSemFrag", 
+    "ProdutoPeleMistaGeralFrag", "ProdutoPeleMistaGeralSemFrag", "ProdutoPeleNormalGeralFrag", "ProdutoPeleNormalGeralSemFrag", "ProdutoPeleSensivelGeralFrag", 
+    "ProdutoPeleSensivelGeralSemFrag"};
+    String[] produtosTom1 = {"ProdutoTom1GeralFrag", "ProdutoTom1GeralSemFrag", "ProdutoTom1OleosaFrag", "ProdutoTom1OleosaSemFrag", "ProdutoTom1SecaFrag",
+    "ProdutoTom1SecaSemFrag", "ProdutoTom1MistaFrag", "ProdutoTom1MistaSemFrag", "ProdutoTom1NormalFrag", "ProdutoTom1NormalSemFrag", "ProdutoTom1SensivelFrag", 
+    "ProdutoTom1SensivelSemFrag"};
+    String[] produtosTom2 = {"ProdutoTom2GeralFrag", "ProdutoTom2GeralSemFrag", "ProdutoTom2OleosaFrag", "ProdutoTom2OleosaSemFrag", "ProdutoTom2SecaFrag", 
+    "ProdutoTom2SecaSemFrag", "ProdutoTom2MistaFrag", "ProdutoTom2MistaSemFrag", "ProdutoTom2NormalFrag", "ProdutoTom2NormalSemFrag", "ProdutoTom2SensivelFrag", 
+    "ProdutoTom2SensivelSemFrag"};
+    String[] produtosTom3 = {"ProdutoTom3GeralFrag", "ProdutoTom3GeralSemFrag", "ProdutoTom3OleosaFrag", "ProdutoTom3OleosaSemFrag", "ProdutoTom3SecaFrag", 
+    "ProdutoTom3SecaSemFrag", "ProdutoTom3MistaFrag", "ProdutoTom3MistaSemFrag", "ProdutoTom3NormalFrag", "ProdutoTom3NormalSemFrag", "ProdutoTom3SensivelFrag", 
+    "ProdutoTom3SensivelSemFrag"};
+    String[] produtosTom4 = {"ProdutoTom4GeralFrag", "ProdutoTom4GeralSemFrag", "ProdutoTom4OleosaFrag", "ProdutoTom4OleosaSemFrag", "ProdutoTom4SecaFrag", 
+    "ProdutoTom4SecaSemFrag", "ProdutoTom4MistaFrag", "ProdutoTom4MistaSemFrag", "ProdutoTom4NormalFrag", "ProdutoTom4NormalSemFrag", "ProdutoTom4SensivelFrag", 
+    "ProdutoTom4SensivelSemFrag"};
+    String[] produtosTom5 = {"ProdutoTom5GeralFrag", "ProdutoTom5GeralSemFrag", "ProdutoTom5OleosaFrag", "ProdutoTom5OleosaSemFrag", "ProdutoTom5SecaFrag", 
+    "ProdutoTom5SecaSemFrag", "ProdutoTom5MistaFrag", "ProdutoTom5MistaSemFrag", "ProdutoTom5NormalFrag", "ProdutoTom5NormalSemFrag", "ProdutoTom5SensivelFrag", 
+    "ProdutoTom5SensivelSemFrag"};
+
+    //Produtos do cliente
+    ArrayList<String> produtosCliente = new ArrayList<String>();
+
     //int orcamentoMedio;
 
     // Looping que vai rodar o código principal enquanto o usuário desejar. Encerra quando escolha = 0.
@@ -28,7 +53,7 @@ public class Main{
 
           System.out.println("Privacidade em primeiro lugar!  \n" + //
                   "Seus dados são utilizados apenas para gerar um relatório personalizado.  \n" + //
-                  "Estamos de acordo com a Lei Geral de Proteção de Dados (LGPD). \n");
+                  "Estamos de acordo com a Lei GeralFrag de Proteção de Dados (LGPD). \n");
 
           System.out.println("-------------------------------------------------------\n" + //
                         "Sobre você\n" + //
@@ -77,20 +102,20 @@ public class Main{
           }
 
           System.out.print("\n4. Qual o seu tom de pele?\n" + //
-                        "(1) Muito clara  \n" + //
-                        "(2) Clara  \n" + //
-                        "(3) Morena clara  \n" + //
-                        "(4) Morena média  \n" + //
-                        "(5) Negra  \n" + //
+                        "(1) Tom 1.0  \n" + //
+                        "(2) Tom 2.0  \n" + //
+                        "(3) Tom 3.0  \n" + //
+                        "(4) Tom 4.0  \n" + //
+                        "(5) Tom 5.0  \n" + //
                         "Digite seu tom de pele: ");
 
           tomDePele = scanner.nextInt();
           switch (tomDePele){
-            case 1: tomDePeleStr = "Muito clara"; break;
-            case 2: tomDePeleStr = "Clara"; break;
-            case 3: tomDePeleStr = "Morena clara"; break;
-            case 4: tomDePeleStr = "Morena média"; break;
-            case 5: tomDePeleStr = "Negra"; break;
+            case 1: tomDePeleStr = "Tom 1"; break;
+            case 2: tomDePeleStr = "Tom 2"; break;
+            case 3: tomDePeleStr = "Tom 3"; break;
+            case 4: tomDePeleStr = "Tom 4"; break;
+            case 5: tomDePeleStr = "Tom 5"; break;
           }
 
           System.out.print("\n5. Quais dessas condições você possui atualmente na pele? (pode escolher mais de uma separando por vírgulas)\n" + //
@@ -183,17 +208,18 @@ public class Main{
           // Coletar os dados do usuário
           String userdata = String.format(
             "Gênero: %s, Idade: %d, Tipo de Pele: %s, Tom de Pele: %s, Condições: %s, Fragância: %s, Utiliza produtos: %s, Procurando produtos: %s ",
-            generoStr, idade, tipoDePeleStr, tomDePeleStr, condicoesDePeleStr, preferenciaFraganciaStr, usaProdutosStr, produtosProcurados 
+            generoStr, idade, tipoDePeleStr, tomDePeleStr, condicoesDePeleStr, preferenciaFraganciaStr, usaProdutosStr, produtosProcuradosStr 
           );
 
           Data.saveUserData(userdata);
 
           // Gerar recomendações
           String recommendation = "Produtos recomendados: ";
+
           Data.saveRecommendation(recommendation);
 
-          //System.out.print("Genovia identificou que sua pele possui as seguintes características: " + //
-                        //tipoDePele + tomDePele + condicoesDePele);
+          System.out.print("Genovia identificou que sua pele possui as seguintes características: " + //
+                        tipoDePeleStr + tomDePeleStr + condicoesDePeleStr);
 
           System.out.println("Com base nessas informações, criamos uma lista personalizada com produtos que:\n" + //
                         "- Respeitam suas restrições\n" + //
