@@ -14,36 +14,37 @@ public class Main{
 
     // Criando as variáveis que vão ter os valores digitados pelo usuário
     int escolha, genero, idade, tipoDePele, tomDePele, condicoesDePele, preferenciaFragancia, usaProdutos, produtosProcurados;
-    String generoStr = "", tipoDePeleStr = "", tomDePeleStr = "", condicoesDePeleStr = "", preferenciaFraganciaStr = "", 
+    String generoStr = "", tipoDePeleStr = "", tomDePeleStr = "", condicoesDePeleStr = "Nenhuma", preferenciaFraganciaStr = "", 
     usaProdutosStr = "", produtosProcuradosStr = "";
   
-    //Array com os produtos específicos para cada tipo de pessoa
-    String[] produtosGerais = {"ProdutoPeleOleosaGeralFrag", "ProdutoPeleOleosaGeralSemFrag", "ProdutoPeleSecaGeralFrag", "ProdutoPeleSecaGeralSemFrag", 
-    "ProdutoPeleMistaGeralFrag", "ProdutoPeleMistaGeralSemFrag", "ProdutoPeleNormalGeralFrag", "ProdutoPeleNormalGeralSemFrag", "ProdutoPeleSensivelGeralFrag", 
-    "ProdutoPeleSensivelGeralSemFrag"};
-    String[] produtosTom1 = {"ProdutoTom1GeralFrag", "ProdutoTom1GeralSemFrag", "ProdutoTom1OleosaFrag", "ProdutoTom1OleosaSemFrag", "ProdutoTom1SecaFrag",
-    "ProdutoTom1SecaSemFrag", "ProdutoTom1MistaFrag", "ProdutoTom1MistaSemFrag", "ProdutoTom1NormalFrag", "ProdutoTom1NormalSemFrag", "ProdutoTom1SensivelFrag", 
-    "ProdutoTom1SensivelSemFrag"};
-    String[] produtosTom2 = {"ProdutoTom2GeralFrag", "ProdutoTom2GeralSemFrag", "ProdutoTom2OleosaFrag", "ProdutoTom2OleosaSemFrag", "ProdutoTom2SecaFrag", 
-    "ProdutoTom2SecaSemFrag", "ProdutoTom2MistaFrag", "ProdutoTom2MistaSemFrag", "ProdutoTom2NormalFrag", "ProdutoTom2NormalSemFrag", "ProdutoTom2SensivelFrag", 
-    "ProdutoTom2SensivelSemFrag"};
-    String[] produtosTom3 = {"ProdutoTom3GeralFrag", "ProdutoTom3GeralSemFrag", "ProdutoTom3OleosaFrag", "ProdutoTom3OleosaSemFrag", "ProdutoTom3SecaFrag", 
-    "ProdutoTom3SecaSemFrag", "ProdutoTom3MistaFrag", "ProdutoTom3MistaSemFrag", "ProdutoTom3NormalFrag", "ProdutoTom3NormalSemFrag", "ProdutoTom3SensivelFrag", 
-    "ProdutoTom3SensivelSemFrag"};
-    String[] produtosTom4 = {"ProdutoTom4GeralFrag", "ProdutoTom4GeralSemFrag", "ProdutoTom4OleosaFrag", "ProdutoTom4OleosaSemFrag", "ProdutoTom4SecaFrag", 
-    "ProdutoTom4SecaSemFrag", "ProdutoTom4MistaFrag", "ProdutoTom4MistaSemFrag", "ProdutoTom4NormalFrag", "ProdutoTom4NormalSemFrag", "ProdutoTom4SensivelFrag", 
-    "ProdutoTom4SensivelSemFrag"};
-    String[] produtosTom5 = {"ProdutoTom5GeralFrag", "ProdutoTom5GeralSemFrag", "ProdutoTom5OleosaFrag", "ProdutoTom5OleosaSemFrag", "ProdutoTom5SecaFrag", 
-    "ProdutoTom5SecaSemFrag", "ProdutoTom5MistaFrag", "ProdutoTom5MistaSemFrag", "ProdutoTom5NormalFrag", "ProdutoTom5NormalSemFrag", "ProdutoTom5SensivelFrag", 
-    "ProdutoTom5SensivelSemFrag"};
-    String[] produtosTom6 = {"ProdutoTom6GeralFrag", "ProdutoTom6GeralSemFrag", "ProdutoTom6OleosaFrag", "ProdutoTom6OleosaSemFrag", "ProdutoTom6SecaFrag", 
-    "ProdutoTom6SecaSemFrag", "ProdutoTom6MistaFrag", "ProdutoTom6MistaSemFrag", "ProdutoTom6NormalFrag", "ProdutoTom6NormalSemFrag", "ProdutoTom6SensivelFrag", 
-    "ProdutoTom6SensivelSemFrag"};
+    //Arrays com os produtos específicos para cada tipo de pele, separados pelos que tem fragância e pelos que não tem
+    String[] produtosGeraisComFrag = {"ProdutoPeleOleosaGeralFrag", "ProdutoPeleSecaGeralFrag", "ProdutoPeleMistaGeralFrag", "ProdutoPeleNormalGeralFrag", 
+    "ProdutoPeleSensivelGeralFrag"};
+    String[] produtosGeraisSemFrag = {"ProdutoPeleOleosaGeralSemFrag", "ProdutoPeleSecaGeralSemFrag", "ProdutoPeleMistaGeralSemFrag", 
+    "ProdutoPeleNormalGeralSemFrag", "ProdutoPeleSensivelGeralSemFrag"};
+    String[] produtosTom1ComFrag = {"ProdutoTom1OleosaFrag", "ProdutoTom1SecaFrag", "ProdutoTom1MistaFrag", "ProdutoTom1NormalFrag", "ProdutoTom1SensivelFrag"};
+    String[] produtosTom1SemFrag = {"ProdutoTom1OleosaSemFrag","ProdutoTom1SecaSemFrag", "ProdutoTom1MistaSemFrag", "ProdutoTom1NormalSemFrag",
+    "ProdutoTom1SensivelSemFrag" };
+    String[] produtosTom2ComFrag = {"ProdutoTom2OleosaFrag", "ProdutoTom2SecaFrag", "ProdutoTom2MistaFrag", "ProdutoTom2NormalFrag", "ProdutoTom2SensivelFrag"};
+    String[] produtosTom2SemFrag = {"ProdutoTom2OleosaSemFrag","ProdutoTom2SecaSemFrag", "ProdutoTom2MistaSemFrag", "ProdutoTom2NormalSemFrag",
+    "ProdutoTom2SensivelSemFrag" };
+    String[] produtosTom3ComFrag = {"ProdutoTom3OleosaFrag", "ProdutoTom3SecaFrag", "ProdutoTom3MistaFrag", "ProdutoTom3NormalFrag", "ProdutoTom3SensivelFrag"};
+    String[] produtosTom3SemFrag = {"ProdutoTom3OleosaSemFrag","ProdutoTom3SecaSemFrag", "ProdutoTom3MistaSemFrag", "ProdutoTom3NormalSemFrag",
+    "ProdutoTom3SensivelSemFrag" };
+    String[] produtosTom4ComFrag = {"ProdutoTom4OleosaFrag", "ProdutoTom4SecaFrag", "ProdutoTom4MistaFrag", "ProdutoTom4NormalFrag", "ProdutoTom4SensivelFrag"};
+    String[] produtosTom4SemFrag = {"ProdutoTom4OleosaSemFrag","ProdutoTom4SecaSemFrag", "ProdutoTom4MistaSemFrag", "ProdutoTom4NormalSemFrag",
+    "ProdutoTom4SensivelSemFrag" };
+    String[] produtosTom5ComFrag = {"ProdutoTom5OleosaFrag", "ProdutoTom5SecaFrag", "ProdutoTom5MistaFrag", "ProdutoTom5NormalFrag", "ProdutoTom5SensivelFrag"};
+    String[] produtosTom5SemFrag = {"ProdutoTom5OleosaSemFrag","ProdutoTom5SecaSemFrag", "ProdutoTom5MistaSemFrag", "ProdutoTom5NormalSemFrag",
+    "ProdutoTom5SensivelSemFrag" };
+    String[] produtosTom6ComFrag = {"ProdutoTom6OleosaFrag", "ProdutoTom6SecaFrag", "ProdutoTom6MistaFrag", "ProdutoTom6NormalFrag", "ProdutoTom6SensivelFrag"};
+    String[] produtosTom6SemFrag = {"ProdutoTom6OleosaSemFrag","ProdutoTom6SecaSemFrag", "ProdutoTom6MistaSemFrag", "ProdutoTom6NormalSemFrag",
+    "ProdutoTom6SensivelSemFrag" };
 
-    //Produtos do cliente
+    //Array contendo os produtos específicos para o cliente.
     ArrayList<String> produtosCliente = new ArrayList<String>();
 
-    //int orcamentoMedio;
+    //Parte opcional || int orcamentoMedio;
 
     // Looping que vai rodar o código principal enquanto o usuário desejar. Encerra quando escolha = 0.
     do {
@@ -56,7 +57,7 @@ public class Main{
 
           System.out.println("Privacidade em primeiro lugar!  \n" + //
                   "Seus dados são utilizados apenas para gerar um relatório personalizado.  \n" + //
-                  "Estamos de acordo com a Lei GeralFrag de Proteção de Dados (LGPD). \n");
+                  "Estamos de acordo com a Lei Geral de Proteção de Dados (LGPD). \n");
 
           System.out.println("-------------------------------------------------------\n" + //
                         "Sobre você\n" + //
@@ -189,6 +190,7 @@ public class Main{
             case 4: usaProdutosStr = "Nunca utiliza"; break;
           }
 
+          /* Testar sem essa parte por enquanto
           System.out.print("8. Quais produtos você está procurando no momento? (escolha mais de um, separando por vírgulas)\n" + //
                         "(1) Skincare\n" + //
                         "(2) Maquiagem\n" + //
@@ -201,6 +203,7 @@ public class Main{
             case 2: produtosProcuradosStr = "De maquiagem"; break;
             case 3: produtosProcuradosStr = "De skincare/maquiagem"; break;
           }
+          */
 
           // Opção de CONTINUAR || caso o usuário deseje ver o relatório dele ou não
           System.out.print("Deseja continuar? [1 para SIM e 2 para NÃO]\n" + //
@@ -214,15 +217,25 @@ public class Main{
 
           // Coletar os dados do usuário
           String userdata = String.format(
-            "Gênero: %s, Idade: %d, Tipo de Pele: %s, Tom de Pele: %s, Condições: %s, Fragância: %s, Utiliza produtos: %s, Procurando produtos: %s ",
-            generoStr, idade, tipoDePeleStr, tomDePeleStr, condicoesDePeleStr, preferenciaFraganciaStr, usaProdutosStr, produtosProcuradosStr 
+            """
+            Gênero: %s, 
+            Idade: %d, 
+            Tipo de Pele: %s, 
+            Tom de Pele: %s,  
+            Condições: %s,
+            Fragância: %s, 
+            Utiliza produtos: %s
+            """    
+            ,generoStr, idade, tipoDePeleStr, tomDePeleStr, condicoesDePeleStr, preferenciaFraganciaStr, usaProdutosStr
           );
 
+          //Envia os dados para o bloco de notas
           Data.saveUserData(userdata);
 
-          // Gerar recomendações
+          // Coletar os dados do usuário
           String recommendation = "Produtos recomendados: ";
 
+          //Envia os dados para o bloco de notas
           Data.saveRecommendation(recommendation);
 
           System.out.print("Genovia identificou que sua pele possui as seguintes características: " + //
@@ -242,7 +255,7 @@ public class Main{
           int visualizarProdutos = scanner.nextInt();
 
           //Mostrar a lista de produtos || caso 1: mostra || caso 2: pula || caso else: repete até digitar 1 ou 2
-          while (visualizarProdutos != 1 || visualizarProdutos != 0){
+          while (visualizarProdutos != 1 || visualizarProdutos != 2){
             if (visualizarProdutos == 1){
 
               // mostrar lista dos produtos

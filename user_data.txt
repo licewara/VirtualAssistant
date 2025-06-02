@@ -1,0 +1,7 @@
+02/06/2025 11:40:47 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
