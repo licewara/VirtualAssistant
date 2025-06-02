@@ -38,3 +38,19 @@ Condições: Nenhuma,
 Fragância: Produtos com fragância,
 Utiliza produtos: Raramente utiliza
 
+02/06/2025 14:41:54 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Normal,
+Tom de Pele: Tom 1 - Pele muito clara,
+Condições: Nenhuma,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+02/06/2025 14:42:36 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Normal,
+Tom de Pele: Tom 1 - Pele muito clara,
+Condições: Nenhuma,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+

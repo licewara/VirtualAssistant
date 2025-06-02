@@ -283,7 +283,39 @@ public class Main{
           while (visualizarProdutos != 1 || visualizarProdutos != 2){
             if (visualizarProdutos == 1){
 
-              // mostrar lista dos produtos
+              String[] produtosSelecionados;
+              boolean comFragancia = preferenciaFraganciaStr.equals("Produtos com fragância");
+
+              switch (tomDePeleStr){
+                case "Tom 1 - Pele muito clara": 
+                  produtosSelecionados = comFragancia ? produtosTom1ComFrag : produtosTom1SemFrag;
+                  break;
+                case "Tom 2 - Pele clara a média":
+                  produtosSelecionados = comFragancia ? produtosTom2ComFrag : produtosTom2SemFrag;
+                  break;
+                case "Tom 3 - Pele média":
+                  produtosSelecionados = comFragancia ? produtosTom3ComFrag : produtosTom3SemFrag;
+                  break;  
+                case "Tom 4 - Pele média escura":
+                  produtosSelecionados = comFragancia ? produtosTom4ComFrag : produtosTom4SemFrag;
+                  break;
+                case "Tom 5 - Pele negra":
+                  produtosSelecionados = comFragancia ? produtosTom5ComFrag : produtosTom5SemFrag;
+                  break;
+                case "Tom 6 - Pele negra profunda":
+                  produtosSelecionados = comFragancia ? produtosTom6ComFrag : produtosTom6SemFrag;
+                  break;
+                default:
+                  produtosSelecionados = comFragancia ? produtosGeraisComFrag : produtosGeraisSemFrag;
+              }
+
+              System.out.println("--------PRODUTOS SELECIONADOS--------");
+              for (String produto : produtosSelecionados){
+                if (produto.contains(tipoDePeleStr)) {
+                  System.out.println("- " + produto);
+                }
+              }
+              break;
   
             } else if (visualizarProdutos != 1 && visualizarProdutos != 2){
   
@@ -301,7 +333,7 @@ public class Main{
           escolha = scanner.nextInt();
 
           } else if (escolha == 0){
-            System.out.println("Certo! Se precisar de ajuda {} ");
+            System.out.println("Certo! Se precisar de ajuda estou no canto da sua tela!");
             break;
           } else {
             System.out.print("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 0 caso NÃO precise de ajuda --> ");
