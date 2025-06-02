@@ -1,4 +1,39 @@
-30/05/2025 16:45:36 - Gênero: 1, Idade: 22, Tipo de Pele: 4, Tom de Pele: 1, Condições: 1
-30/05/2025 16:47:04 - Gênero: 2, Idade: 25, Tipo de Pele: 1, Tom de Pele: 4, Condições: 5
-02/06/2025 11:10:57 - Gênero: 1, Idade: 22, Tipo de Pele: 4, Tom de Pele: 1, Condições: 1
-02/06/2025 11:12:12 - Gênero: 1, Idade: 22, Tipo de Pele: 1, Tom de Pele: 1, Condições: 8
+02/06/2025 11:40:47 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+02/06/2025 11:57:23 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Condições: Nenhuma,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+02/06/2025 11:58:10 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Condições: Nenhuma,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+02/06/2025 12:00:36 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Condições: Nenhuma,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+02/06/2025 12:01:17 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Condições: Nenhuma,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+

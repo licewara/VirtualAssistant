@@ -238,8 +238,8 @@ public class Main{
           //Envia os dados para o bloco de notas
           Data.saveRecommendation(recommendation);
 
-          System.out.print("Genovia identificou que sua pele possui as seguintes características: Pele" + //
-                        tipoDePeleStr + tomDePeleStr + condicoesDePeleStr);
+          System.out.println("Genovia identificou que sua pele possui as seguintes características: Pele " + //
+                        tipoDePeleStr + ", " + tomDePeleStr + ", " + condicoesDePeleStr);
 
           System.out.println("Com base nessas informações, criamos uma lista personalizada com produtos que:\n" + //
                         "- Respeitam suas restrições\n" + //
@@ -271,13 +271,15 @@ public class Main{
           }
 
           // FINAL. Pergunta se o usuário deseja continuar utilizando a assistente ou não.
+          System.out.print("Deseja realizar outro cadastro? [Digite 1 para SIM e 0 para NÃO]");
+          System.out.print("--> ");
           escolha = scanner.nextInt();
 
           } else if (escolha == 0){
             System.out.println("Certo! Se precisar de ajuda {} ");
             break;
           } else {
-            System.out.print("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 2 caso NÃO precise de ajuda --> ");
+            System.out.print("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 0 caso NÃO precise de ajuda --> ");
             escolha = scanner.nextInt();
           }
         }
