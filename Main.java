@@ -116,12 +116,12 @@ public class Main{
 
           tomDePele = scanner.nextInt();
           switch (tomDePele){
-            case 1: tomDePeleStr = "Tom 1"; break;
-            case 2: tomDePeleStr = "Tom 2"; break;
-            case 3: tomDePeleStr = "Tom 3"; break;
-            case 4: tomDePeleStr = "Tom 4"; break;
-            case 5: tomDePeleStr = "Tom 5"; break;
-            case 6: tomDePeleStr = "Tom 6"; break;
+            case 1: tomDePeleStr = "Tom 1 - Pele muito clara"; break;
+            case 2: tomDePeleStr = "Tom 2 - Pele clara a média"; break;
+            case 3: tomDePeleStr = "Tom 3 - Pele média"; break;
+            case 4: tomDePeleStr = "Tom 4 - Pele média escura"; break;
+            case 5: tomDePeleStr = "Tom 5 - Pele negra"; break;
+            case 6: tomDePeleStr = "Tom 6 - Pele negra profunda"; break;
           }
 
           /*CONDIÇÕES DE PELE 
@@ -238,7 +238,7 @@ public class Main{
           //Envia os dados para o bloco de notas
           Data.saveRecommendation(recommendation);
 
-          System.out.print("Genovia identificou que sua pele possui as seguintes características: " + //
+          System.out.print("Genovia identificou que sua pele possui as seguintes características: Pele" + //
                         tipoDePeleStr + tomDePeleStr + condicoesDePeleStr);
 
           System.out.println("Com base nessas informações, criamos uma lista personalizada com produtos que:\n" + //
