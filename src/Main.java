@@ -1,3 +1,4 @@
+package src;
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -63,21 +64,26 @@ public class Main{
                         "Sobre você\n" + //
                         "-------------------------------------------------------\n");
 
-          System.out.print("1. Qual seu gênero?\n" + //
+          while (true){
+            System.out.print("1. Qual seu gênero?\n" + //
                         "(1) Feminino  \n" + //
                         "(2) Masculino  \n" + //
                         "(3) Prefiro não informar  \n" + //
                         "(4) Outro\n " + //
                         "Digite seu gênero: ");
 
-          genero = scanner.nextInt();        
+            genero = scanner.nextInt();        
 
-          switch (genero){
-            case 1: generoStr = "Feminino"; break;
-            case 2: generoStr = "Masculino"; break;
-            case 3: generoStr = "Não-informado"; break;
-            case 4: generoStr = "Outro"; break;
+            switch (genero){
+              case 1: generoStr = "Feminino"; break;
+              case 2: generoStr = "Masculino"; break;
+              case 3: generoStr = "Não-informado"; break;
+              case 4: generoStr = "Outro"; break;
+              default: System.out.println("Desculpe, não entendi. Digite novamente. "); continue;
+            }
+            break;
           }
+        
 
           System.out.print("\n2. Qual sua idade?\n"  + //
                         "Digite sua idade: ");
@@ -87,8 +93,10 @@ public class Main{
           System.out.print("\n-------------------------------------------------------\n" + //
                         "Características da sua pele\n" + //
                         "-------------------------------------------------------\n");
-                          
-          System.out.print("\n3. Qual o seu tipo de pele?\n" + //
+
+          //Looping que só é válido caso o usuário digite um dos números esperados.
+          while (true){
+            System.out.print("\n3. Qual o seu tipo de pele?\n" + //
                         "(1) Oleosa  \n" + //
                         "(2) Seca  \n" + //
                         "(3) Mista  \n" + //
@@ -96,16 +104,21 @@ public class Main{
                         "(5) Sensível  \n" + //
                         "Digite seu tipo de pele: ");
 
-          tipoDePele = scanner.nextInt();
-          switch (tipoDePele){
-            case 1: tipoDePeleStr = "Oleosa"; break;
-            case 2: tipoDePeleStr = "Seca"; break;
-            case 3: tipoDePeleStr = "Mista"; break;
-            case 4: tipoDePeleStr = "Normal"; break;
-            case 5: tipoDePeleStr = "Sensível"; break;
+            tipoDePele = scanner.nextInt();
+
+            switch (tipoDePele){
+              case 1: tipoDePeleStr = "Oleosa"; break;
+              case 2: tipoDePeleStr = "Seca"; break;
+              case 3: tipoDePeleStr = "Mista"; break;
+              case 4: tipoDePeleStr = "Normal"; break;
+              case 5: tipoDePeleStr = "Sensível"; break;
+              default: System.out.println("Desculpe, não entendi. Digite novamente. "); continue;
+            }
+            break;
           }
 
-          System.out.print("\n4. Qual o seu tom de pele?\n" + //
+          while (true){
+            System.out.print("\n4. Qual o seu tom de pele?\n" + //
                         "(1) Tom 1 - Pele muito clara  \n" + //
                         "(2) Tom 2 - Pele clara a média \n" + //
                         "(3) Tom 3 - Pele média \n" + //
@@ -114,14 +127,18 @@ public class Main{
                         "(6) Tom 6 - Pele negra profunda \n" + //
                         "Digite seu tom de pele: ");
 
-          tomDePele = scanner.nextInt();
-          switch (tomDePele){
-            case 1: tomDePeleStr = "Tom 1 - Pele muito clara"; break;
-            case 2: tomDePeleStr = "Tom 2 - Pele clara a média"; break;
-            case 3: tomDePeleStr = "Tom 3 - Pele média"; break;
-            case 4: tomDePeleStr = "Tom 4 - Pele média escura"; break;
-            case 5: tomDePeleStr = "Tom 5 - Pele negra"; break;
-            case 6: tomDePeleStr = "Tom 6 - Pele negra profunda"; break;
+            tomDePele = scanner.nextInt();
+
+            switch (tomDePele){
+              case 1: tomDePeleStr = "Tom 1 - Pele muito clara"; break;
+              case 2: tomDePeleStr = "Tom 2 - Pele clara a média"; break;
+              case 3: tomDePeleStr = "Tom 3 - Pele média"; break;
+              case 4: tomDePeleStr = "Tom 4 - Pele média escura"; break;
+              case 5: tomDePeleStr = "Tom 5 - Pele negra"; break;
+              case 6: tomDePeleStr = "Tom 6 - Pele negra profunda"; break;
+              default: System.out.println("Desculpe, não entendi. Digite novamente. "); continue;
+            }
+            break;
           }
 
           /*CONDIÇÕES DE PELE 
@@ -150,15 +167,21 @@ public class Main{
             case 8: condicoesDePeleStr = "Nenhuma condição da pele citada"; break;
           }*/
 
-          System.out.print("\n" + //
+          while (true){
+            System.out.print("\n" + //
                         "5. Você prefere produtos com ou sem fragrância? [1 para COM FRAGANCIA || 2 para SEM FRAGANCIA] \n" +
                         "Digite aqui sua preferência: ");
 
-          preferenciaFragancia = scanner.nextInt();
-          switch (preferenciaFragancia){
-            case 1: preferenciaFraganciaStr = "Produtos com fragância"; break;
-            case 2: preferenciaFraganciaStr = "Produtos sem fragância"; break;
+            preferenciaFragancia = scanner.nextInt();
+
+            switch (preferenciaFragancia){
+              case 1: preferenciaFraganciaStr = "Produtos com fragância"; break;
+              case 2: preferenciaFraganciaStr = "Produtos sem fragância"; break;
+              default: System.out.println("Desculpe, não entendi. Digite novamente. "); continue;
+            }
+            break;
           }
+         
 
           /*OPCIONAL
            System.out.print("10. Qual seu orçamento médio por produto? \n" + //
@@ -175,19 +198,23 @@ public class Main{
                         "Sobre sua rotina\n" + //
                         "-------------------------------------------------------");
           
-          System.out.print("7. Você já usa produtos de skincare ou maquiagem?\n" + //
+          while (true){
+            System.out.print("7. Você já usa produtos de skincare ou maquiagem?\n" + //
                         "(1) Sim, uso todos os dias  \n" + //
                         "(2) Uso algumas vezes por semana  \n" + //
                         "(3) Raramente  \n" + //
                         "(4) Nunca usei, quero começar agora  \n" + //
                         "Digite aqui se usa produtos: ");
 
-          usaProdutos = scanner.nextInt();
-          switch (usaProdutos){
-            case 1: usaProdutosStr = "Todos os dias"; break;
-            case 2: usaProdutosStr = "Algumas vezes por semana"; break;
-            case 3: usaProdutosStr = "Raramente utiliza"; break;
-            case 4: usaProdutosStr = "Nunca utiliza"; break;
+            usaProdutos = scanner.nextInt();
+            switch (usaProdutos){
+              case 1: usaProdutosStr = "Todos os dias"; break;
+              case 2: usaProdutosStr = "Algumas vezes por semana"; break;
+              case 3: usaProdutosStr = "Raramente utiliza"; break;
+              case 4: usaProdutosStr = "Nunca utiliza"; break;
+              default: System.out.println("Desculpe, não entendi. Digite novamente. "); continue;
+            }
+            break;
           }
 
           /* Testar sem essa parte por enquanto
@@ -205,15 +232,14 @@ public class Main{
           }
           */
 
+          
           // Opção de CONTINUAR || caso o usuário deseje ver o relatório dele ou não
-          System.out.print("Deseja continuar? [1 para SIM e 2 para NÃO]\n" + //
-                        "--> ");
+
+          System.out.println("Obrigada por responder, estamos processando seus dados...");
 
           System.out.println("-------------------------------------------------------\n" + //
                         "Geração do Relatório\n" + //
                         "-------------------------------------------------------");
-                        
-          System.out.println("Obrigada por responder, estamos processando seus dados...");
 
           // Coletar os dados do usuário
           String userdata = String.format(
@@ -245,7 +271,6 @@ public class Main{
                         "- Respeitam suas restrições\n" + //
                         "- Atendem às suas preferências\n" + //
                         "- Estão dentro do seu orçamento");
-
 
           System.out.print("Deseja visualizar a lista de produtos recomendados?\n" + //
                         "(1) Sim, mostrar lista de produtos  \n" + //
