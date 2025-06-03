@@ -267,6 +267,43 @@ public class Main{
         //Envia os dados para o bloco de notas
         Data.saveUserData(userdata);
 
+        String[] produtosSelecionados;
+        boolean comFragancia = preferenciaFraganciaStr.equals("Produtos com fragância");
+
+        switch (tomDePeleStr){
+          case "Tom 1 - Pele muito clara": 
+            produtosSelecionados = comFragancia ? produtosTom1ComFrag : produtosTom1SemFrag;
+            break;
+          case "Tom 2 - Pele clara a média":
+            produtosSelecionados = comFragancia ? produtosTom2ComFrag : produtosTom2SemFrag;
+            break;
+          case "Tom 3 - Pele média":
+            produtosSelecionados = comFragancia ? produtosTom3ComFrag : produtosTom3SemFrag;
+            break;  
+          case "Tom 4 - Pele média escura":
+            produtosSelecionados = comFragancia ? produtosTom4ComFrag : produtosTom4SemFrag;
+            break;
+          case "Tom 5 - Pele negra":
+            produtosSelecionados = comFragancia ? produtosTom5ComFrag : produtosTom5SemFrag;
+            break;
+          case "Tom 6 - Pele negra profunda":
+            produtosSelecionados = comFragancia ? produtosTom6ComFrag : produtosTom6SemFrag;
+            break;
+          default:
+            produtosSelecionados = comFragancia ? produtosGeraisComFrag : produtosGeraisSemFrag;
+        }
+
+        // Coletar os dados do usuário
+        ArrayList<String> produtosRecomendados = new ArrayList<>();
+        for (String produto : produtosSelecionados) {
+          if (produto.contains(tipoDePeleStr)){
+            produtosRecomendados.add(produto);
+          }
+        }
+
+        //Envia os dados para o bloco de notas
+        Data.saveRecommendation(produtosRecomendados);
+
         System.out.println("Genovia identificou que sua pele possui as seguintes características: Pele " + //
                       tipoDePeleStr + ", " + tomDePeleStr + ", " + condicoesDePeleStr);
 
@@ -284,34 +321,7 @@ public class Main{
 
         //Mostrar a lista de produtos || caso 1: mostra || caso 2: pula || caso else: repete até digitar 1 ou 2
         while (visualizarProdutos != 1 || visualizarProdutos != 2){
-          if (visualizarProdutos == 1){
-
-            String[] produtosSelecionados;
-            boolean comFragancia = preferenciaFraganciaStr.equals("Produtos com fragância");
-
-            switch (tomDePeleStr){
-              case "Tom 1 - Pele muito clara": 
-                produtosSelecionados = comFragancia ? produtosTom1ComFrag : produtosTom1SemFrag;
-                break;
-              case "Tom 2 - Pele clara a média":
-                produtosSelecionados = comFragancia ? produtosTom2ComFrag : produtosTom2SemFrag;
-                break;
-              case "Tom 3 - Pele média":
-                produtosSelecionados = comFragancia ? produtosTom3ComFrag : produtosTom3SemFrag;
-                break;  
-              case "Tom 4 - Pele média escura":
-                produtosSelecionados = comFragancia ? produtosTom4ComFrag : produtosTom4SemFrag;
-                break;
-              case "Tom 5 - Pele negra":
-                produtosSelecionados = comFragancia ? produtosTom5ComFrag : produtosTom5SemFrag;
-                break;
-              case "Tom 6 - Pele negra profunda":
-                produtosSelecionados = comFragancia ? produtosTom6ComFrag : produtosTom6SemFrag;
-                break;
-              default:
-                produtosSelecionados = comFragancia ? produtosGeraisComFrag : produtosGeraisSemFrag;
-            }
-
+          if (visualizarProdutos == 1){            
             System.out.println("--------PRODUTOS SELECIONADOS--------");
             for (String produto : produtosSelecionados){
               if (produto.contains(tipoDePeleStr)) {
@@ -319,19 +329,7 @@ public class Main{
 
               }
             }
-
-                // Coletar os dados do usuário
-            ArrayList<String> produtosRecomendados = new ArrayList<>();
-            for (String produto : produtosSelecionados) {
-              if (produto.contains(tipoDePeleStr)){
-                produtosRecomendados.add(produto);
-              }
-            }
-
-            //Envia os dados para o bloco de notas
-            Data.saveRecommendation(produtosRecomendados);
             break;
-
           } else if (visualizarProdutos != 1 && visualizarProdutos != 2){
 
             System.out.print("Não entendi! Por favor, digite novamente [1 para SIM 2 para NÃO] --> ");

@@ -110,3 +110,11 @@ Condições: Nenhuma,
 Fragância: Produtos sem fragância,
 Utiliza produtos: Todos os dias
 
+03/06/2025 13:55:56 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 4 - Pele média escura,
+Condições: Nenhuma,
+Fragância: Produtos com fragância,
+Utiliza produtos: Raramente utiliza
+
