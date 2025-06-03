@@ -23,33 +23,42 @@ public class Main{
     "ProdutoPeleSensivelGeralFrag"};
     String[] produtosGeraisSemFrag = {"ProdutoPeleOleosaGeralSemFrag", "ProdutoPeleSecaGeralSemFrag", "ProdutoPeleMistaGeralSemFrag", 
     "ProdutoPeleNormalGeralSemFrag", "ProdutoPeleSensivelGeralSemFrag"};
-    String[] produtosTom1ComFrag = {"ProdutoTom1OleosaFrag", "ProdutoTom1SecaFrag", "ProdutoTom1MistaFrag", "ProdutoTom1NormalFrag", "ProdutoTom1SensivelFrag"};
-    String[] produtosTom1SemFrag = {"ProdutoTom1OleosaSemFrag","ProdutoTom1SecaSemFrag", "ProdutoTom1MistaSemFrag", "ProdutoTom1NormalSemFrag",
-    "ProdutoTom1SensivelSemFrag" };
-    String[] produtosTom2ComFrag = {"ProdutoTom2OleosaFrag", "ProdutoTom2SecaFrag", "ProdutoTom2MistaFrag", "ProdutoTom2NormalFrag", "ProdutoTom2SensivelFrag"};
-    String[] produtosTom2SemFrag = {"ProdutoTom2OleosaSemFrag","ProdutoTom2SecaSemFrag", "ProdutoTom2MistaSemFrag", "ProdutoTom2NormalSemFrag",
-    "ProdutoTom2SensivelSemFrag" };
-    String[] produtosTom3ComFrag = {"ProdutoTom3OleosaFrag", "ProdutoTom3SecaFrag", "ProdutoTom3MistaFrag", "ProdutoTom3NormalFrag", "ProdutoTom3SensivelFrag"};
-    String[] produtosTom3SemFrag = {"ProdutoTom3OleosaSemFrag","ProdutoTom3SecaSemFrag", "ProdutoTom3MistaSemFrag", "ProdutoTom3NormalSemFrag",
-    "ProdutoTom3SensivelSemFrag" };
-    String[] produtosTom4ComFrag = {"ProdutoTom4OleosaFrag", "ProdutoTom4SecaFrag", "ProdutoTom4MistaFrag", "ProdutoTom4NormalFrag", "ProdutoTom4SensivelFrag"};
-    String[] produtosTom4SemFrag = {"ProdutoTom4OleosaSemFrag","ProdutoTom4SecaSemFrag", "ProdutoTom4MistaSemFrag", "ProdutoTom4NormalSemFrag",
-    "ProdutoTom4SensivelSemFrag" };
-    String[] produtosTom5ComFrag = {"ProdutoTom5OleosaFrag", "ProdutoTom5SecaFrag", "ProdutoTom5MistaFrag", "ProdutoTom5NormalFrag", "ProdutoTom5SensivelFrag"};
-    String[] produtosTom5SemFrag = {"ProdutoTom5OleosaSemFrag","ProdutoTom5SecaSemFrag", "ProdutoTom5MistaSemFrag", "ProdutoTom5NormalSemFrag",
-    "ProdutoTom5SensivelSemFrag" };
-    String[] produtosTom6ComFrag = {"ProdutoTom6OleosaFrag", "ProdutoTom6SecaFrag", "ProdutoTom6MistaFrag", "ProdutoTom6NormalFrag", "ProdutoTom6SensivelFrag"};
-    String[] produtosTom6SemFrag = {"ProdutoTom6OleosaSemFrag","ProdutoTom6SecaSemFrag", "ProdutoTom6MistaSemFrag", "ProdutoTom6NormalSemFrag",
-    "ProdutoTom6SensivelSemFrag" };
+    String[] produtosTom1ComFrag = {"Pele Oleosa || Sabonete Facial Refrescante — NIVEA", "Pele seca || Creme Nutritivo Nivea", 
+    "Pele Mista || Hidratante Facial Nuvem O Boticário", "Pele Normal || Tônico Facial Purificante Hidradeep", "Pele Sensível || Água Micelar LOréal"};
+    String[] produtosTom1SemFrag = {"Pele Oleosa ||  Gel de Limpeza Effaclar Concentrado","Pele Seca || Loção Hidratante Sem Perfume Cetaphil", "Pele Mista || Hidratante Facial Oil-Free Neutrogena",
+    "Pele Normal || Hidratante Facial Sem Perfume Cerave", "Pele Sensível || Sabonete Líquido Dermocalmante Episol" };
+    String[] produtosTom2ComFrag = {"Pele Oleosa || Gel de Limpeza Antioleosidade Vichy Normaderm", "Pele Seca || Creme Hidratante Corporal Karité L’Occitane", 
+    "Pele Mista || Hidratante Facial Aqua Gel NIVEA", "Pele Normal || Sérum Facial Nutritivo Ameixa Negra O Boticário Nativa Spa", 
+    "Pele Sensível || Sabonete Líquido Facial Calmante Simple"};
+    String[] produtosTom2SemFrag = {"Pele Oleosa || Sabonete Líquido Facial Pureté Thermale Vichy","Pele Seca || Creme Hidratante Ultra Repair First Aid Beauty", 
+    "Pele Mista || Gel-Creme Facial Hydra Boost Sem Perfume Neutrogena", "Pele Normal || Gel de Limpeza Facial Sem Perfume Simple", 
+    "Pele Sensível || Fluido Facial Mineral 89 Vichy" };
+    String[] produtosTom3ComFrag = {"Pele Oleosa || Gel Secativo Antioleosidade Avon Clearskin", "Pele Seca || Creme Corporal Milk NIVEA", 
+    "Pele Mista || Hidratante Facial Hydro Boost Neutrogena", "Pele Normal || Sabonete Facial de Arroz Bioré", "Pele Sensível || Água Termal Avène"};
+    String[] produtosTom3SemFrag = {"Pele Oleosa || Sabonete Líquido Dermotivin Control Galderma","Pele Seca || Hidratante Facial Nutritivo Cerave", 
+    "Pele Mista || Creme Facial Calmante Eucerin", "Pele Normal || Gel de Limpeza Suave Cetaphil", "Pele Sensível || Hidratante Hipoalergênico Mustela" };
+    String[] produtosTom4ComFrag = {"Pele Oleosa || Sabonete em Barra de Enxofre Granado", "Pele Seca || Hidratante Corporal Intenso O Boticário", 
+    "Pele Mista || Loção Hidratante Corporal Lavanda e Baunilha Johnson’s", "Pele Normal || Gel Facial Antioxidante Vitamina C Tracta", 
+    "Pele Sensível || Tônico Calmante de Camomila Panvel Faces"};
+    String[] produtosTom4SemFrag = {"Pele Oleosa || Gel de Limpeza Effaclar Alta Tolerância La Roche-Posay","Pele Seca || Creme Reparador Cicaplast Baume B5 La Roche-Posay", 
+    "Pele Mista || Loção Hidratante Sem Perfume Granado Bebê", "Pele Normal || Hidratante Facial Calmante Neostrata Restore", 
+    "Pele Sensível || Sabonete Líquido Sem Fragrância Simple" };
+    String[] produtosTom5ComFrag = {"Pele Oleosa || Tônico Adstringente Clean & Clear", "Pele Seca || Loção Corporal Cereja e Avelã Natura Tododia", 
+    "Pele Mista || Creme Facial Uniform & Matte Garnier", "Pele Normal || Creme Hidratante Facial Rosa Mosqueta Needs", "Pele Sensível || Espuma de Limpeza Nutritiva NIVEA"};
+    String[] produtosTom5SemFrag = {"Pele Oleosa || Gel de Limpeza Sebium Gel Moussant Bioderma","Pele Seca || Creme Hidratante Corporal Dersani", 
+    "Pele Mista || Loção Hidratante Facial Eucerin", "Pele Normal || Loção Hidratante Facial", "Pele Sensível || Água Micelar Garnier" };
+    String[] produtosTom6ComFrag = {"Pele Oleosa || Loção Facial Antioleosidade Actine Darrow", "Pele Seca || Creme Iluminador de Coco Skala", 
+    "Pele Mista || Hidratante Aqua Boost The Body Shop", "Pele Normal || Sabonete Facial Líquido Granado Bebê Tradicional", "Pele Sensível || Tônico Suavizante Avon Care"};
+    String[] produtosTom6SemFrag = {"Pele Oleosa || Gel Facial Antioleosidade CeraVe","Pele Seca || Creme Ultra Hidratante Cetaphil Pro", 
+    "Pele Mista || Hidratante Diário Facial Simple", "Pele Normal || Sabonete de Glicerina Granado Bebê", "Pele Sensível || Hidratante Facial Calmante Avene Tolerance Control"};
 
     //Array contendo os produtos específicos para o cliente.
     ArrayList<String> produtosCliente = new ArrayList<String>();
 
     //Parte opcional || int orcamentoMedio;
-
+    escolha = scanner.nextInt();
     // Looping que vai rodar o código principal enquanto o usuário desejar. Encerra quando escolha = 0.
     do {
-      escolha = scanner.nextInt();
       if (escolha == 1){
         System.out.println("Olá! Eu sou a Genovia, sua assistente de beleza personalizada.  \n" + //
                 "Estou aqui para te ajudar a encontrar os melhores produtos de skincare e maquiagem,  \n" + //
@@ -327,14 +336,14 @@ public class Main{
         }
 
         // FINAL. Pergunta se o usuário deseja continuar utilizando a assistente ou não.
-        System.out.print("Deseja realizar outro cadastro? [Digite 1 para SIM e 0 para NÃO]");
+        System.out.print("Deseja realizar outro cadastro? [Digite 1 para SIM e 2 para NÃO]");
         System.out.print("--> ");
         escolha = scanner.nextInt();
 
-        if (escolha == 0){
-          System.out.println("Certo! Se precisar de ajuda estou no canto da sua tela!");
+        if (escolha == 2){
+          System.out.println("Certo! Estarei aqui caso precisar.");
           break;
-        } else if (escolha != 1 || escolha != 0){
+        } else if (escolha != 1 && escolha != 2){
           System.out.print("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 0 caso NÃO precise de ajuda --> ");
           escolha = scanner.nextInt();
         }
