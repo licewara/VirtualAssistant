@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 
 public class Data {
     private static final String DATA_DIR = "data";
@@ -28,10 +29,16 @@ public class Data {
         }
   }
 
-  public static void saveRecommendation(String recommendation) {
+  public static void saveRecommendation(ArrayList<String> produtosRecomendados) {
     try (FileWriter writer = new FileWriter(RECOMMENDATIONS_FILE, true)) {
         String timestamp = LocalDateTime.now().format(DATE_FORMATTER);
-        writer.write(timestamp + " - " + recommendation + "\n\n");
+        writer.write(timestamp + " - RECOMENDAÇÕES:\n");
+
+        for (String produto : produtosRecomendados) {
+          writer.write("- "+ produto + "\n");
+        }
+
+        writer.write("\n"); 
     } catch (IOException e) {
         System.err.println("Erro ao salvar recomendação: " + e.getMessage());
     }

@@ -102,3 +102,11 @@ Condições: Nenhuma,
 Fragância: Produtos sem fragância,
 Utiliza produtos: Raramente utiliza
 
+03/06/2025 13:50:12 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Mista,
+Tom de Pele: Tom 6 - Pele negra profunda,
+Condições: Nenhuma,
+Fragância: Produtos sem fragância,
+Utiliza produtos: Todos os dias
+

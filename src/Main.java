@@ -54,10 +54,11 @@ public class Main{
 
     //Array contendo os produtos específicos para o cliente.
     ArrayList<String> produtosCliente = new ArrayList<String>();
-
+    
     //Parte opcional || int orcamentoMedio;
-    escolha = scanner.nextInt();
+
     // Looping que vai rodar o código principal enquanto o usuário desejar. Encerra quando escolha = 0.
+    escolha = scanner.nextInt();
     do {
       if (escolha == 1){
         System.out.println("Olá! Eu sou a Genovia, sua assistente de beleza personalizada.  \n" + //
@@ -266,12 +267,6 @@ public class Main{
         //Envia os dados para o bloco de notas
         Data.saveUserData(userdata);
 
-        // Coletar os dados do usuário
-        String recommendation = "Produtos recomendados: ";
-
-        //Envia os dados para o bloco de notas
-        Data.saveRecommendation(recommendation);
-
         System.out.println("Genovia identificou que sua pele possui as seguintes características: Pele " + //
                       tipoDePeleStr + ", " + tomDePeleStr + ", " + condicoesDePeleStr);
 
@@ -321,8 +316,20 @@ public class Main{
             for (String produto : produtosSelecionados){
               if (produto.contains(tipoDePeleStr)) {
                 System.out.println("- " + produto);
+
               }
             }
+
+                // Coletar os dados do usuário
+            ArrayList<String> produtosRecomendados = new ArrayList<>();
+            for (String produto : produtosSelecionados) {
+              if (produto.contains(tipoDePeleStr)){
+                produtosRecomendados.add(produto);
+              }
+            }
+
+            //Envia os dados para o bloco de notas
+            Data.saveRecommendation(produtosRecomendados);
             break;
 
           } else if (visualizarProdutos != 1 && visualizarProdutos != 2){
