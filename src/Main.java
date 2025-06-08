@@ -358,6 +358,9 @@ public class Main{
         System.out.print("Digite o ID do cliente (ex: 00042): ");
         int idConsulta = scanner.nextInt();
         System.out.println(Data.findUserById(idConsulta));
+        System.out.print("Ainda precisa de ajuda? [1] - SIM || [2] - NÃO || [3] - CONSULTAR USUÁRIO\n" + //
+                          "--> " );
+        escolha = scanner.nextInt();
       } else{
         while (escolha != 1 && escolha != 2 && escolha != 3){
           System.out.print("Desculpe! Não entendi. Digite novamente: ");
@@ -366,6 +369,8 @@ public class Main{
       } 
     } while (escolha == 1);
     
+    System.out.println("Obrigada pela participação. Estarei aqui caso precisar.");
+
     scanner.close();
 
   }
