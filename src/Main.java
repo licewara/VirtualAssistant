@@ -10,13 +10,13 @@ public class Main{
             "Você já conhece nossa assistente virtual de beleza?\n" + //
             "Ela está pronta para montar uma lista personalizada de produtos, feita especialmente para você, com base nas suas características e na sua rotina. Vamos começar?\n" + //
             "\n" + //
-            "Digite [1] para 'Quero Agora' e [2] para 'Talvez depois'\n" + //
+            "Digite [1] para 'Quero Agora' || [2] para 'Talvez depois' || [3] para 'Consultar Cliente por ID\n" + //
             "--> ");
 
     // Criando as variáveis que vão ter os valores digitados pelo usuário
-    int escolha, genero, idade, tipoDePele, tomDePele, condicoesDePele, preferenciaFragancia, usaProdutos, produtosProcurados;
+    int escolha, genero, idade, tipoDePele, tomDePele, preferenciaFragancia, usaProdutos;
     String generoStr = "", tipoDePeleStr = "", tomDePeleStr = "", condicoesDePeleStr = "Nenhuma", preferenciaFraganciaStr = "", 
-    usaProdutosStr = "", produtosProcuradosStr = "";
+    usaProdutosStr = "";
   
     //Arrays com os produtos específicos para cada tipo de pele, separados pelos que tem fragância e pelos que não tem
     String[] produtosGeraisComFrag = {"ProdutoPeleOleosaGeralFrag", "ProdutoPeleSecaGeralFrag", "ProdutoPeleMistaGeralFrag", "ProdutoPeleNormalGeralFrag", 
@@ -51,9 +51,6 @@ public class Main{
     "Pele Mista || Hidratante Aqua Boost The Body Shop", "Pele Normal || Sabonete Facial Líquido Granado Bebê Tradicional", "Pele Sensível || Tônico Suavizante Avon Care"};
     String[] produtosTom6SemFrag = {"Pele Oleosa || Gel Facial Antioleosidade CeraVe","Pele Seca || Creme Ultra Hidratante Cetaphil Pro", 
     "Pele Mista || Hidratante Diário Facial Simple", "Pele Normal || Sabonete de Glicerina Granado Bebê", "Pele Sensível || Hidratante Facial Calmante Avene Tolerance Control"};
-
-    //Array contendo os produtos específicos para o cliente.
-    ArrayList<String> produtosCliente = new ArrayList<String>();
     
     //Parte opcional || int orcamentoMedio;
 
@@ -129,22 +126,22 @@ public class Main{
         while (true){
           System.out.print("\n4. Qual o seu tom de pele?\n" + //
                       "(1) Tom 1 - Pele muito clara  \n" + //
-                      "(2) Tom 2 - Pele clara a média \n" + //
-                      "(3) Tom 3 - Pele média \n" + //
+                      "(2) Tom 2 - Pele clara \n" + //
+                      "(3) Tom 3 - Pele média clara \n" + //
                       "(4) Tom 4 - Pele média escura \n" + //
-                      "(5) Tom 5 - Pele negra  \n" + //
-                      "(6) Tom 6 - Pele negra profunda \n" + //
+                      "(5) Tom 5 - Pele escura  \n" + //
+                      "(6) Tom 6 - Pele muito escura \n" + //
                       "Digite seu tom de pele: ");
 
           tomDePele = scanner.nextInt();
 
           switch (tomDePele){
             case 1: tomDePeleStr = "Tom 1 - Pele muito clara"; break;
-            case 2: tomDePeleStr = "Tom 2 - Pele clara a média"; break;
-            case 3: tomDePeleStr = "Tom 3 - Pele média"; break;
+            case 2: tomDePeleStr = "Tom 2 - Pele clara"; break;
+            case 3: tomDePeleStr = "Tom 3 - Pele média clara"; break;
             case 4: tomDePeleStr = "Tom 4 - Pele média escura"; break;
-            case 5: tomDePeleStr = "Tom 5 - Pele negra"; break;
-            case 6: tomDePeleStr = "Tom 6 - Pele negra profunda"; break;
+            case 5: tomDePeleStr = "Tom 5 - Pele escura"; break;
+            case 6: tomDePeleStr = "Tom 6 - Pele muito escura"; break;
             default: System.out.println("Desculpe, não entendi. Digite novamente. "); continue;
           }
           break;
@@ -243,30 +240,36 @@ public class Main{
 
         
         // Opção de CONTINUAR || caso o usuário deseje ver o relatório dele ou não
-
         System.out.println("Obrigada por responder, estamos processando seus dados...");
 
         System.out.println("-------------------------------------------------------\n" + //
                       "Geração do Relatório\n" + //
                       "-------------------------------------------------------");
 
-        // Coletar os dados do usuário
+        //=======Enviar os dados para o bloco de notas user_data.txt========
+        // Coletar os dados do usuário no formato que foi digitado abaixo
         String userdata = String.format(
           """
           Gênero: %s, 
           Idade: %d, 
           Tipo de Pele: %s, 
           Tom de Pele: %s,  
-          Condições: %s,
           Fragância: %s, 
           Utiliza produtos: %s
           """    
-          ,generoStr, idade, tipoDePeleStr, tomDePeleStr, condicoesDePeleStr, preferenciaFraganciaStr, usaProdutosStr
+          ,generoStr, idade, tipoDePeleStr, tomDePeleStr, preferenciaFraganciaStr, usaProdutosStr
         );
 
-        //Envia os dados para o bloco de notas
-        Data.saveUserData(userdata);
+        //Cria um ID para o usuário
+        int clienteId = Data.getNextId();
 
+        // Envia os dados para o bloco de notas user_data.txt
+        Data.saveUserData(clienteId, userdata);
+
+        System.out.println("Seu ID de cadastro é: " + String.format("%05d", clienteId));
+
+        //=======Enviar os dados para o bloco de notas recommendations.txt========
+        // Cria uma Array para os produtos recomendados para cada pessoa & torna comFragancia True ou False dependendo do valor digitado pelo usuário
         String[] produtosSelecionados;
         boolean comFragancia = preferenciaFraganciaStr.equals("Produtos com fragância");
 
@@ -293,7 +296,7 @@ public class Main{
             produtosSelecionados = comFragancia ? produtosGeraisComFrag : produtosGeraisSemFrag;
         }
 
-        // Coletar os dados do usuário
+        // Adiciona na Array "produtosRecomendados" somente os itens específicos para o tipo de pele
         ArrayList<String> produtosRecomendados = new ArrayList<>();
         for (String produto : produtosSelecionados) {
           if (produto.contains(tipoDePeleStr)){
@@ -301,7 +304,7 @@ public class Main{
           }
         }
 
-        //Envia os dados para o bloco de notas
+        //Envia os dados para o bloco de notas "recommendations.txt"
         Data.saveRecommendation(produtosRecomendados);
 
         System.out.println("Genovia identificou que sua pele possui as seguintes características: Pele " + //
@@ -316,26 +319,23 @@ public class Main{
                       "(1) Sim, mostrar lista de produtos  \n" + //
                       "(2) Não, encerrar aqui  \n" + //
                       "--> ");
-                  
+        
+        //Mostrar a lista de produtos || caso 1: mostra || caso 2: pula || caso else: repete até digitar 1 ou 2              
         int visualizarProdutos = scanner.nextInt();
 
-        //Mostrar a lista de produtos || caso 1: mostra || caso 2: pula || caso else: repete até digitar 1 ou 2
         while (visualizarProdutos != 1 || visualizarProdutos != 2){
           if (visualizarProdutos == 1){            
             System.out.println("--------PRODUTOS SELECIONADOS--------");
             for (String produto : produtosSelecionados){
               if (produto.contains(tipoDePeleStr)) {
                 System.out.println("- " + produto);
-
               }
             }
             break;
           } else if (visualizarProdutos != 1 && visualizarProdutos != 2){
-
             System.out.print("Não entendi! Por favor, digite novamente [1 para SIM 2 para NÃO] --> ");
             visualizarProdutos = scanner.nextInt();
-
-          } else{
+          } else {
             break;
           }
         }
@@ -354,6 +354,10 @@ public class Main{
         }
       } else if (escolha == 2){
         System.out.println("Entendo! Estarei aqui caso precisar.");
+      } else if (escolha == 3){
+        System.out.print("Digite o ID do cliente (ex: 00042): ");
+        int idConsulta = scanner.nextInt();
+        System.out.println(Data.findUserById(idConsulta));
       }
     } while (escolha == 1);
     
