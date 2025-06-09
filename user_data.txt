@@ -125,3 +125,73 @@ Tom de Pele: Tom 1 - Pele muito clara,
 Fragância: Produtos com fragância,
 Utiliza produtos: Todos os dias
 
+[ID:00005] 09/06/2025 01:45:31 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Normal,
+Tom de Pele: Tom 1 - Pele muito clara,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+[ID:00006] 09/06/2025 10:47:12 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+[ID:00007] 09/06/2025 10:48:09 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+[ID:00008] 09/06/2025 10:49:54 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+[ID:00009] 09/06/2025 10:51:07 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+[ID:00010] 09/06/2025 10:51:26 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+[ID:00011] 09/06/2025 10:52:06 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+[ID:00012] 09/06/2025 10:53:13 - Gênero: Feminino,
+Idade: 22,
+Tipo de Pele: Oleosa,
+Tom de Pele: Tom 1 - Pele muito clara,
+Fragância: Produtos com fragância,
+Utiliza produtos: Todos os dias
+
+[ID:00013] 09/06/2025 16:21:01 - Gênero: Outro,
+Idade: 51,
+Tipo de Pele: Mista,
+Tom de Pele: Tom 6 - Pele muito escura,
+Fragância: Produtos sem fragância,
+Utiliza produtos: Raramente utiliza
+
+[ID:00014] 09/06/2025 16:22:02 - Gênero: Outro,
+Idade: 51,
+Tipo de Pele: Sensível,
+Tom de Pele: Tom 6 - Pele muito escura,
+Fragância: Produtos sem fragância,
+Utiliza produtos: Nunca utiliza
+

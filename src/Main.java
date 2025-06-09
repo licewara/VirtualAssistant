@@ -23,34 +23,66 @@ public class Main{
     "ProdutoPeleSensivelGeralFrag"};
     String[] produtosGeraisSemFrag = {"ProdutoPeleOleosaGeralSemFrag", "ProdutoPeleSecaGeralSemFrag", "ProdutoPeleMistaGeralSemFrag", 
     "ProdutoPeleNormalGeralSemFrag", "ProdutoPeleSensivelGeralSemFrag"};
-    String[] produtosTom1ComFrag = {"Pele Oleosa || Sabonete Facial Refrescante — NIVEA", "Pele seca || Creme Nutritivo Nivea", 
-    "Pele Mista || Hidratante Facial Nuvem O Boticário", "Pele Normal || Tônico Facial Purificante Hidradeep", "Pele Sensível || Água Micelar LOréal"};
-    String[] produtosTom1SemFrag = {"Pele Oleosa ||  Gel de Limpeza Effaclar Concentrado","Pele Seca || Loção Hidratante Sem Perfume Cetaphil", "Pele Mista || Hidratante Facial Oil-Free Neutrogena",
-    "Pele Normal || Hidratante Facial Sem Perfume Cerave", "Pele Sensível || Sabonete Líquido Dermocalmante Episol" };
-    String[] produtosTom2ComFrag = {"Pele Oleosa || Gel de Limpeza Antioleosidade Vichy Normaderm", "Pele Seca || Creme Hidratante Corporal Karité L’Occitane", 
-    "Pele Mista || Hidratante Facial Aqua Gel NIVEA", "Pele Normal || Sérum Facial Nutritivo Ameixa Negra O Boticário Nativa Spa", 
-    "Pele Sensível || Sabonete Líquido Facial Calmante Simple"};
-    String[] produtosTom2SemFrag = {"Pele Oleosa || Sabonete Líquido Facial Pureté Thermale Vichy","Pele Seca || Creme Hidratante Ultra Repair First Aid Beauty", 
-    "Pele Mista || Gel-Creme Facial Hydra Boost Sem Perfume Neutrogena", "Pele Normal || Gel de Limpeza Facial Sem Perfume Simple", 
-    "Pele Sensível || Fluido Facial Mineral 89 Vichy" };
-    String[] produtosTom3ComFrag = {"Pele Oleosa || Gel Secativo Antioleosidade Avon Clearskin", "Pele Seca || Creme Corporal Milk NIVEA", 
-    "Pele Mista || Hidratante Facial Hydro Boost Neutrogena", "Pele Normal || Sabonete Facial de Arroz Bioré", "Pele Sensível || Água Termal Avène"};
-    String[] produtosTom3SemFrag = {"Pele Oleosa || Sabonete Líquido Dermotivin Control Galderma","Pele Seca || Hidratante Facial Nutritivo Cerave", 
-    "Pele Mista || Creme Facial Calmante Eucerin", "Pele Normal || Gel de Limpeza Suave Cetaphil", "Pele Sensível || Hidratante Hipoalergênico Mustela" };
-    String[] produtosTom4ComFrag = {"Pele Oleosa || Sabonete em Barra de Enxofre Granado", "Pele Seca || Hidratante Corporal Intenso O Boticário", 
-    "Pele Mista || Loção Hidratante Corporal Lavanda e Baunilha Johnson’s", "Pele Normal || Gel Facial Antioxidante Vitamina C Tracta", 
-    "Pele Sensível || Tônico Calmante de Camomila Panvel Faces"};
-    String[] produtosTom4SemFrag = {"Pele Oleosa || Gel de Limpeza Effaclar Alta Tolerância La Roche-Posay","Pele Seca || Creme Reparador Cicaplast Baume B5 La Roche-Posay", 
-    "Pele Mista || Loção Hidratante Sem Perfume Granado Bebê", "Pele Normal || Hidratante Facial Calmante Neostrata Restore", 
-    "Pele Sensível || Sabonete Líquido Sem Fragrância Simple" };
-    String[] produtosTom5ComFrag = {"Pele Oleosa || Tônico Adstringente Clean & Clear", "Pele Seca || Loção Corporal Cereja e Avelã Natura Tododia", 
-    "Pele Mista || Creme Facial Uniform & Matte Garnier", "Pele Normal || Creme Hidratante Facial Rosa Mosqueta Needs", "Pele Sensível || Espuma de Limpeza Nutritiva NIVEA"};
-    String[] produtosTom5SemFrag = {"Pele Oleosa || Gel de Limpeza Sebium Gel Moussant Bioderma","Pele Seca || Creme Hidratante Corporal Dersani", 
-    "Pele Mista || Loção Hidratante Facial Eucerin", "Pele Normal || Loção Hidratante Facial", "Pele Sensível || Água Micelar Garnier" };
-    String[] produtosTom6ComFrag = {"Pele Oleosa || Loção Facial Antioleosidade Actine Darrow", "Pele Seca || Creme Iluminador de Coco Skala", 
-    "Pele Mista || Hidratante Aqua Boost The Body Shop", "Pele Normal || Sabonete Facial Líquido Granado Bebê Tradicional", "Pele Sensível || Tônico Suavizante Avon Care"};
-    String[] produtosTom6SemFrag = {"Pele Oleosa || Gel Facial Antioleosidade CeraVe","Pele Seca || Creme Ultra Hidratante Cetaphil Pro", 
-    "Pele Mista || Hidratante Diário Facial Simple", "Pele Normal || Sabonete de Glicerina Granado Bebê", "Pele Sensível || Hidratante Facial Calmante Avene Tolerance Control"};
+    String[] produtosTom1ComFrag = {"Pele Oleosa || Espuma de Limpeza Marca 1", "Pele Oleosa || Água Micelar Marca 1", "Pele Oleosa || Gel-creme Hidratante Marca 1",
+    "Pele Seca || Espuma de limpeza Marca 1", "Pele Seca || Demaquilante bifásico Marca 1", "Pele Seca || Sérum ácido hialurônico Marca 1", 
+    "Pele Mista || Sabonete líquido neutro Marca 1", "Pele Mista || Demaquilante bifásico Marca 1", "Pele Mista || Sérum ácido hialurônico Marca 1", 
+    "Pele Normal || Espuma de Limpeza Neutro Marca 1", "Pele Normal || Água Micelar Marca 1", "Pele Normal || Loção Hidratante Facial Marca 1", 
+    "Pele Sensível || Espuma de Limpeza Marca 1", "Pele Sensível || Água Micelar Marca 1", "Pele Sensível || Loção Calmante com pantenol Marca 1"};
+    String[] produtosTom1SemFrag = {"Pele Oleosa ||  Espuma de Limpeza Marca 2", "Pele Oleosa ||  Água Micelar Marca 2",  "Pele Oleosa ||  Gel-creme Hidratante Marca 2", 
+    "Pele Seca || Espuma de limpeza Marca 2", "Pele Seca || Demaquilante bifásico Marca 2", "Pele Seca || Sérum ácido hialurônico Marca 2", 
+    "Pele Mista || Sabonete líquido neutro Marca 2", "Pele Mista || Demaquilante bifásico Marca 2", "Pele Mista || Sérum ácido hialurônico Marca 2", 
+    "Pele Normal || Espuma de Limpeza Neutro Marca 2", "Pele Normal || Água Micelar Marca 2", "Pele Normal || Loção Hidratante Facial Marca 2", 
+    "Pele Sensível || Espuma de Limpeza Marca 2", "Pele Sensível || Água Micelar Marca 2", "Pele Sensível || Loção Calmante com pantenol Marca 2" };
+    String[] produtosTom2ComFrag = {"Pele Oleosa || Protetor Solar em Stick Toque Seco Marca 1", "Pele Oleosa || Protetor Solar em Stick Toque Seco Marca 1", "Pele Oleosa || Esfoliante Facial Suave Enzimático Marca 1", 
+    "Pele Seca || Creme reparador facial Marca 1", "Pele Seca || Hidratante e Protetor Labial Marca 1", "Pele Seca || Protetor Solar Toque Hidratante Marca 1",
+    "Pele Mista || Serum hidratante Marca 1", "Pele Mista || Hidrante e protetor labial Marca 1", "Pele Mista || ⁠Protetor Solar toque seco Marca 1", 
+    "Pele Normal || Protetor solar Marca 1", "Pele Normal || Máscara facial de hidratação Marca 1", "Pele Normal || Balm labial Marca 1", 
+    "Pele Sensível || Protetor solar físico Marca 1", "Pele Sensível || ⁠Máscara facial calmante Marca 1", "Pele Sensível || ⁠Balm labial Marca 1"};
+    String[] produtosTom2SemFrag = {"Pele Oleosa || Protetor Solar em Stick Toque Seco Marca 2", "Pele Oleosa || Protetor Solar em Stick Toque Seco Marca 2", "Pele Oleosa || Esfoliante Facial Suave Enzimático Marca 2", 
+    "Pele Seca || Creme reparador facial Marca 2", "Pele Seca || Hidratante e Protetor Labial Marca 2", "Pele Seca || Protetor Solar Toque Hidratante Marca 2",
+    "Pele Mista || Serum hidratante Marca 2", "Pele Mista || Hidrante e protetor labial Marca 2", "Pele Mista || ⁠Protetor Solar toque seco Marca 2", 
+    "Pele Normal || Protetor solar Marca 2", "Pele Normal || Máscara facial de hidratação Marca 2", "Pele Normal || Balm labial Marca 2", 
+    "Pele Sensível || Protetor solar físico Marca 2", "Pele Sensível || ⁠Máscara facial calmante Marca 2", "Pele Sensível || ⁠Balm labial Marca 2"};
+    String[] produtosTom3ComFrag = {"Pele Oleosa || ⁠Serum Matificante Marca 1", "Pele Oleosa || Máscara facial Argila Marca 1","Pele Oleosa || ⁠Demaquilante Marca 1", 
+    "Pele Seca || Creme área dos olhos Marca 1", "Pele Seca || ⁠Máscara facial nutritiva Marca 1", "Pele Seca || Espuma de limpeza Marca 1", 
+    "Pele Mista || Máscara facial Hidratante Marca 1", "Pele Mista || Tônico equilibrante Marca 1", "Pele Mista || ⁠Esfoliante suave Marca 1",
+    "Pele Normal || Espuma de Limpeza Neutro Marca 1", "Pele Normal || Balm Labial Marca 1", "Pele Normal || Máscara Facial de Hidratação Marca 1", 
+    "Pele Sensível || Creme para área dos olhos com ativos suaves Marca 1", "Pele Sensível || ⁠Demaquilante em bálsamo calmante Marca 1", "Pele Sensível || ⁠Balm labial Marca 1"};
+    String[] produtosTom3SemFrag = {"Pele Oleosa || ⁠Serum Matificante Marca 2", "Pele Oleosa || Máscara facial Argila Marca 2","Pele Oleosa || ⁠Demaquilante Marca 2", 
+    "Pele Seca || Creme área dos olhos Marca 2", "Pele Seca || ⁠Máscara facial nutritiva Marca 2", "Pele Seca || Espuma de limpeza Marca 2", 
+    "Pele Mista || Máscara facial Hidratante Marca 2", "Pele Mista || Tônico equilibrante Marca 2", "Pele Mista || ⁠Esfoliante suave Marca 2",
+    "Pele Normal || Espuma de Limpeza Neutro Marca 2", "Pele Normal || Balm Labial Marca 2", "Pele Normal || Máscara Facial de Hidratação Marca 2", 
+    "Pele Sensível || Creme para área dos olhos com ativos suaves Marca 2", "Pele Sensível || ⁠Demaquilante em bálsamo calmante Marca 2", "Pele Sensível || ⁠Balm labial Marca 2" };
+    String[] produtosTom4ComFrag = {"Pele Oleosa || ⁠Gel demaquilante Marca 1", "Pele Oleosa || Esfoliante Facial Suave Enzimático Marca 1", "Pele Oleosa || ⁠Água Micelar Marca 1", 
+    "Pele Seca || C⁠Creme reparador facial Marca 1", "Pele Seca || Creme área dos olhos Marca 1", "Pele Seca || Espuma de limpeza Marca 1", 
+    "Pele Mista || Sabonete líquido neutro Marca 1", "Pele Mista || ⁠Hidrante e protetor labial Marca 1", "Pele Mista || Creme para óleos Marca 1",
+    "Pele Normal || Sérum leve antioxidante Marca 1", "Pele Normal || Balm Labial Marca 1", "Pele Normal || Protetor solar Marca 1", 
+    "Pele Sensível || Máscara facial calmante  Marca 1", "Pele Sensível || ⁠Loção calmante com pantenol Marca 1", "Pele Sensível || ⁠Espuma de limpeza Marca 1"};
+    String[] produtosTom4SemFrag = {"Pele Oleosa || ⁠Gel demaquilante Marca 2", "Pele Oleosa || Esfoliante Facial Suave Enzimático Marca 2", "Pele Oleosa || ⁠Água Micelar Marca 2", 
+    "Pele Seca || C⁠Creme reparador facial Marca 2", "Pele Seca || Creme área dos olhos Marca 2", "Pele Seca || Espuma de limpeza Marca 2", 
+    "Pele Mista || Sabonete líquido neutro Marca 2", "Pele Mista || ⁠Hidrante e protetor labial Marca 2", "Pele Mista || Creme para óleos Marca 2",
+    "Pele Normal || Sérum leve antioxidante Marca 2", "Pele Normal || Balm Labial Marca 2", "Pele Normal || Protetor solar Marca 2", 
+    "Pele Sensível || Máscara facial calmante  Marca 2", "Pele Sensível || ⁠Loção calmante com pantenol Marca 2", "Pele Sensível || ⁠Espuma de limpeza Marca 2" };
+    String[] produtosTom5ComFrag = {"Pele Oleosa || ⁠Máscara facial Argila Marca 1", "Pele Oleosa || Protetor solar em Stick Toque Seco Marca 1", "Pele Oleosa || ⁠Sabonete em gel suave Marca 1", 
+    "Pele Seca || ⁠Hidrante e protetor labial Marca 1", "Pele Seca || ⁠Máscara facial nutritiva Marca 1", "Pele Seca || Espuma de limpeza Marca 1", 
+    "Pele Mista || ⁠Sérum hidratante Marca 1", "Pele Mista || Esfoliante suave Marca 1", "Pele Mista || Creme para óleos Marca 1",
+    "Pele Normal || Loção hidratante facial  Marca 1", "Pele Normal || Máscara facial de hidratação Marca 1", "Pele Normal || Balm labial  Marca 1", 
+    "Pele Sensível || Protetor solar físico  Marca 1", "Pele Sensível || Espuma de limpeza Marca 1", "Pele Sensível || Creme para área dos olhos com ativos suaves Marca 1"};
+    String[] produtosTom5SemFrag = {"Pele Oleosa || ⁠Máscara facial Argila Marca 2", "Pele Oleosa || Protetor solar em Stick Toque Seco Marca 2", "Pele Oleosa || ⁠Sabonete em gel suave Marca 2", 
+    "Pele Seca || ⁠Hidrante e protetor labial Marca 2", "Pele Seca || ⁠Máscara facial nutritiva Marca 2", "Pele Seca || Espuma de limpeza Marca 2", 
+    "Pele Mista || ⁠Sérum hidratante Marca 2", "Pele Mista || Esfoliante suave Marca 2", "Pele Mista || Creme para óleos Marca 2",
+    "Pele Normal || Loção hidratante facial  Marca 2", "Pele Normal || Máscara facial de hidratação Marca 2", "Pele Normal || Balm labial  Marca 2", 
+    "Pele Sensível || Protetor solar físico  Marca 2", "Pele Sensível || Espuma de limpeza Marca 2", "Pele Sensível || Creme para área dos olhos com ativos suaves Marca 2"};
+    String[] produtosTom6ComFrag = {"Pele Oleosa || Espuma de Limpeza Marca 1", "Pele Oleosa || Gel- Creme Hidratante  Marca 1", "Pele Oleosa || ⁠Sérum Matificante Marca 1", 
+    "Pele Seca || ⁠Creme reparador facial Marca 1", "Pele Seca || Máscara facial nutritiva Marca 1", "Pele Seca || Demaquilante bifásico Marca 1", 
+    "Pele Mista || ⁠Hidrante e protetor labial Marca 1", "Pele Mista || ⁠Máscara facial Hidratante Marca 1", "Pele Mista || ⁠Tônico equilibrante Marca 1",
+    "Pele Normal || Protetor solar  Marca 1", "Pele Normal || Sérum leve antioxidante Marca 1", "Pele Normal || Água micelar  Marca 1", 
+    "Pele Sensível || Máscara facial calmante Marca 1", "Pele Sensível || Demaquilante em bálsamo calmante Marca 1", "Pele Sensível || Creme para área dos olhos com ativos suaves Marca 1"};
+    String[] produtosTom6SemFrag = {"Pele Oleosa || Espuma de Limpeza Marca 2", "Pele Oleosa || Gel- Creme Hidratante  Marca 2", "Pele Oleosa || ⁠Sérum Matificante Marca 2", 
+    "Pele Seca || ⁠Creme reparador facial Marca 2", "Pele Seca || Máscara facial nutritiva Marca 2", "Pele Seca || Demaquilante bifásico Marca 2", 
+    "Pele Mista || ⁠Hidrante e protetor labial Marca 2", "Pele Mista || ⁠Máscara facial Hidratante Marca 2", "Pele Mista || ⁠Tônico equilibrante Marca 2",
+    "Pele Normal || Protetor solar  Marca 2", "Pele Normal || Sérum leve antioxidante Marca 2", "Pele Normal || Água micelar  Marca 2", 
+    "Pele Sensível || Máscara facial calmante Marca 2", "Pele Sensível || Demaquilante em bálsamo calmante Marca 2", "Pele Sensível || Creme para área dos olhos com ativos suaves Marca 2"};
     
     //Parte opcional || int orcamentoMedio;
 
@@ -205,7 +237,7 @@ public class Main{
                       "-------------------------------------------------------");
         
         while (true){
-          System.out.print("7. Você já usa produtos de skincare ou maquiagem?\n" + //
+          System.out.print("6. Você já usa produtos de skincare ou maquiagem?\n" + //
                       "(1) Sim, uso todos os dias  \n" + //
                       "(2) Uso algumas vezes por semana  \n" + //
                       "(3) Raramente  \n" + //
@@ -277,19 +309,19 @@ public class Main{
           case "Tom 1 - Pele muito clara": 
             produtosSelecionados = comFragancia ? produtosTom1ComFrag : produtosTom1SemFrag;
             break;
-          case "Tom 2 - Pele clara a média":
+          case "Tom 2 - Pele clara":
             produtosSelecionados = comFragancia ? produtosTom2ComFrag : produtosTom2SemFrag;
             break;
-          case "Tom 3 - Pele média":
+          case "Tom 3 - Pele média clara":
             produtosSelecionados = comFragancia ? produtosTom3ComFrag : produtosTom3SemFrag;
             break;  
           case "Tom 4 - Pele média escura":
             produtosSelecionados = comFragancia ? produtosTom4ComFrag : produtosTom4SemFrag;
             break;
-          case "Tom 5 - Pele negra":
+          case "Tom 5 - Pele escura":
             produtosSelecionados = comFragancia ? produtosTom5ComFrag : produtosTom5SemFrag;
             break;
-          case "Tom 6 - Pele negra profunda":
+          case "Tom 6 - Pele muito escura":
             produtosSelecionados = comFragancia ? produtosTom6ComFrag : produtosTom6SemFrag;
             break;
           default:
@@ -345,12 +377,14 @@ public class Main{
         System.out.print("--> ");
         escolha = scanner.nextInt();
 
-        if (escolha == 2){
-          System.out.println("Certo! Estarei aqui caso precisar.");
-          break;
-        } else if (escolha != 1 && escolha != 2){
-          System.out.print("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 0 caso NÃO precise de ajuda --> ");
-          escolha = scanner.nextInt();
+        while (escolha != 1 && escolha != 2){
+          if (escolha == 2){
+            System.out.println("Certo! Estarei aqui caso precisar.");
+            break;
+          } else if (escolha != 1 && escolha != 2){
+            System.out.print("Desculpe, não entendi! Digite o número 1 caso precise de ajuda e o número 0 caso NÃO precise de ajuda --> ");
+            escolha = scanner.nextInt();
+          }
         }
       } else if (escolha == 2){
         System.out.println("Entendo! Estarei aqui caso precisar.");
