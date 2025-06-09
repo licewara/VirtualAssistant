@@ -369,7 +369,7 @@ public class Main{
       } 
     } while (escolha == 1);
     
-    System.out.println("Obrigada pela participação. Estarei aqui caso precisar.");
+    System.out.println("Obrigada pela participação.");
 
     scanner.close();
 
